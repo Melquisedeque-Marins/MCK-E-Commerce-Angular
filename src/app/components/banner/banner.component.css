@@ -10,6 +10,7 @@
     align-items: center;
     padding: 60px 120px;
     width: 90%;
+    max-height: 320px;
 }
 
 

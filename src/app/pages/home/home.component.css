@@ -1,0 +1,16 @@
+
+.product-card__title {
+    margin: auto;
+    margin-top: 50px;
+    color: #231F1E;
+    width: 90%;
+}
+
+.content__product-card {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px;
+    width: 90%;
+}
+
