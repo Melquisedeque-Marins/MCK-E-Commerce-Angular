@@ -29,6 +29,7 @@
 .navbar__search-box > input{
     padding: 10px 20px;
     border: 1px solid #aaa;
+    background-color: #F5F6F6;
     border-radius: 25px;
 }
 
@@ -43,6 +44,7 @@
 }
 
 .navbar__login > a{
+    font-weight: 500;
     color: #231F1E;
 }
 
@@ -57,5 +59,6 @@
 }
 
 .navbar__cart > a{
+    font-weight: 500;
     color: #231F1E;
 }

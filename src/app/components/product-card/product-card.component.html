@@ -13,7 +13,9 @@
                         <span class="price__cifrao">R$ </span><span> {{ product.price}}</span> 
                     </div>
                 </div>
-                <p>{{ product.description }} </p>
+                <a [routerLink]="['products', product.id]">
+                    <p>{{ product.description }} </p>
+                </a>
             </div>
             <div class="content__details-reviews">
                 <span><img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">

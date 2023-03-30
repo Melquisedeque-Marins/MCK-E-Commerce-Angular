@@ -5,7 +5,7 @@
 
 .product-card__title {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 30px;
     color: #231F1E;
     width: 90%;
 }
@@ -14,8 +14,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: auto;
-    margin-top: 50px;
+    margin: 0 auto;
+    margin-top: 30px;
     width: 90%;
 }
 
