@@ -1,8 +1,10 @@
 <div class="container__product-card">
     <div class="product-card__content">
-        <div class="content__img">
-            <img src="{{ product.coverImg}}" alt="">
-        </div>
+        <a [routerLink]="['products', product.id]">
+            <div class="content__img">
+                <img src="{{ product.coverImg}}" alt="">
+            </div>
+        </a>
         <div class="content__details">
             <div class="content__details-info">
                 <div class="content__details-title">
