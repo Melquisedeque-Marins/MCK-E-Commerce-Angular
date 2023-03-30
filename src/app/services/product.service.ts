@@ -20,6 +20,6 @@ export class ProductService {
   }
 
   getAllProducts():Observable<SpringPage<Product>> {
-    return this.http.get<SpringPage<Product>>(this.baseApiUrl);
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=0&size=8`);
   }
 }

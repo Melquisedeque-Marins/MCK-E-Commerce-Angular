@@ -1,0 +1,145 @@
+
+.container__product-details {
+    width: 100%;
+    padding: 0 50px;
+    margin: 50px 0;
+}
+
+.product-details__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__left-content {
+    width: 50%;
+    margin-right: 80px;
+}
+
+.main-photo__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F6F6;
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.main-photo__background img{
+    width: 80%;
+}
+
+.left-content__other-photos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.other-photos__backgorund {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F6F6;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.other-photos__backgorund:hover {
+    opacity: .7;
+}
+
+.left-content__other-photos img {
+    width: 100px;
+}
+
+
+.content__details-title h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #231f1e;
+}
+
+.content__details-info p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+    width: 60%;
+
+}
+
+.content__details-reviews {
+    margin-bottom: 20px;
+}
+
+
+.details-title__price {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #231f1e;
+    margin-bottom: 20px;
+
+}
+
+.price__cifrao {
+    font-size: 26px;
+    margin-right: 5px;
+}
+
+.content__details-btn button{
+    font-family: Eina01, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #231f1e;
+    background-color: unset;
+    border-radius: 20px;
+    padding: 12px 22px;
+    border: 1px solid #231f1e;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.content__details-btn button:hover {
+    color: #fff;
+    background-color: #003d29;
+    transition: .5s;
+}
+
+.consult-shipping h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+}
+
+.consult-shipping__input-box input{
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid #231f1e6a;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 200px;
+
+}
+
+.consult-shipping__input-box button{
+    font-size: 14px;
+    font-weight: 700;
+    color: red;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.consult-shipping__input-box button:hover {
+    color: #FFF;
+    background-color: red;
+    
+}
