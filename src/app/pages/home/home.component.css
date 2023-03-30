@@ -1,4 +1,8 @@
 
+.container__home {
+    margin: 0 auto;
+}
+
 .product-card__title {
     margin: auto;
     margin-top: 50px;
@@ -10,7 +14,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin: 50px;
+    margin: auto;
+    margin-top: 50px;
     width: 90%;
 }
 

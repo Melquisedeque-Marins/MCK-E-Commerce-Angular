@@ -1,9 +1,7 @@
-* {
-    font-family: Inter, sans-serif;
-}
-
 .container__product-card {
-    max-width: 320px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+    width: 100%;
 }
 
 .product-card__content {
@@ -12,6 +10,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 250px;
 }
 
 .content__img {
@@ -21,7 +20,7 @@
     background-color: #F5F6F6;
     margin-bottom: 12px;
     border-radius: 10px;
-    max-height: 250px;
+    height: 250px;
 }
 
 .content__img img {

@@ -8,7 +8,7 @@
 .product-details__content {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .content__left-content {

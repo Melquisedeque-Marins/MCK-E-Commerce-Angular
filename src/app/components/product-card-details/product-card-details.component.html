@@ -3,22 +3,14 @@
         <div class="content__left-content">
             <div class="left-content__main-photo">
                <div class="main-photo__background">
-                    <img src="https://cdn.weasy.io/users/xiaomi/catalog/redmi_note_12_pro_5g_black.png" alt="">
+                    <img src="{{ product.coverImg }}" alt="">
                </div> 
             </div>
             <div class="left-content__other-photos">
-                <div class="other-photos__backgorund">
-                    <img src="https://cdn.weasy.io/users/xiaomi/catalog/redmi_note_12_pro_5g_black.png" alt="">
+                <div class="other-photos__backgorund" *ngFor="let photo of product.imgUrl">
+                    <img src="{{photo}}" alt="">
                 </div>
-                <div class="other-photos__backgorund">
-                    <img src="https://cdn.weasy.io/users/xiaomi/catalog/redmi_note_12_pro_5g_black.png" alt="">
-                </div>
-                <div class="other-photos__backgorund">
-                    <img src="https://cdn.weasy.io/users/xiaomi/catalog/redmi_note_12_pro_5g_black.png" alt="">
-                </div>
-                <div class="other-photos__backgorund">
-                    <img src="https://cdn.weasy.io/users/xiaomi/catalog/redmi_note_12_pro_5g_black.png" alt="">
-                </div>
+                
             </div>
             
         </div>
@@ -26,9 +18,9 @@
             <div class="content__details">
                 <div class="content__details-info">
                     <div class="content__details-title">
-                        <h1>Smartphone S12</h1>
+                        <h1>{{ product.name}}</h1>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ea sed nulla deserunt beatae cupiditate.</p>
+                    <p> {{ product.description }}</p>
                 </div>
                 <div class="content__details-reviews">
                     <span><img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
@@ -36,10 +28,10 @@
                         <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
                         <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
                         <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                    </span><span> (102)</span>
+                    </span><span> ({{ product.qtyReviews }}) avaliações</span>
                 </div>
                 <div class="details-title__price">
-                    <span class="price__cifrao">R$ </span><span> 1250.00</span> 
+                    <span class="price__cifrao">R$ </span><span> {{ product.price }}</span> 
                 </div>
                 <div class="content__details-btn">
                     <button>Add to Cart</button>
