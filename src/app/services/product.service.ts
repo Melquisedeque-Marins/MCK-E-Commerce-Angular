@@ -11,7 +11,6 @@ import { SpringPage } from '../SpringPage';
 })
 export class ProductService {
   private baseApiUrl:string = environment.productApiUrl;
-  private apiUrl = `${this.baseApiUrl}/4`;
 
   constructor(private http: HttpClient) { }
 

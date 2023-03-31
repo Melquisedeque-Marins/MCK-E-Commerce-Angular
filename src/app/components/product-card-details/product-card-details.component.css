@@ -199,16 +199,16 @@
 .consult-shipping__input-box button{
     font-size: 14px;
     font-weight: 700;
-    color: red;
+    color: #003d29;
     height: 40px;
     padding: 0 10px;
     border-radius: 10px;
-    border: 1px solid red;
+    border: 1px solid #003d297b;
     cursor: pointer;
 }
 
 .consult-shipping__input-box button:hover {
     color: #FFF;
-    background-color: red;
+    background-color: #003d29;
     
 }

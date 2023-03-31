@@ -1,5 +1,8 @@
 <div class="container__product-details">
     <app-product-card-details [product]="product"></app-product-card-details>
-    <app-reviews-list></app-reviews-list>
+
+    <div *ngFor="let review of reviews">
+        <app-reviews-list [review]="review"></app-reviews-list>
+    </div>
 </div>
 

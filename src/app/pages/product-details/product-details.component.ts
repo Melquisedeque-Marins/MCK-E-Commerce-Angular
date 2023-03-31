@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/Product';
+import { Review } from 'src/app/Review';
 import { ProductService } from 'src/app/services/product.service';
+import { ReviewService } from 'src/app/services/review.service';
 
 @Component({
   selector: 'app-product-details',
@@ -11,8 +13,9 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductDetailsComponent implements OnInit {
   product!:Product;
   pathVariable!:number
+  reviews:Review[] = [];
 
-  constructor( private productService: ProductService, private route: ActivatedRoute) { 
+  constructor( private productService: ProductService, private reviewService: ReviewService, private route: ActivatedRoute) { 
     this.route.params.subscribe(
       res => this.pathVariable = res['id']
     )
@@ -24,8 +27,19 @@ export class ProductDetailsComponent implements OnInit {
         next: (res) => {
           this.product = res
         },
-        error: (err) => console.log('error')
+        error: (err) => console.log(err)
     });
+  }
+
+  getReviews() {
+    this.reviewService.getReviewsByProduct(1).subscribe(
+      {
+        next: (res) => {this.reviews = res
+          console.log(this.reviews)
+        },
+        error: (err) => console.log('review error')
+      }
+    )
   }
 
 }

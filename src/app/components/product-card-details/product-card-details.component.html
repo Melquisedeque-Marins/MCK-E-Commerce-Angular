@@ -4,12 +4,12 @@
             <div class="left-content__main-photo">
                <div class="main-photo__background">
                 <span style="color:#FFF; font-size: 50px" >❤</span> 
-                <img src="{{ product.coverImg }}" alt="">
+                <img [src]="product.coverImg" alt="">
                </div> 
             </div>
             <div class="left-content__other-photos">
                 <div class="other-photos__backgorund" *ngFor="let photo of product.imgUrl">
-                    <img src="{{photo}}" alt="">
+                    <img [src]="photo" alt="">
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
                         size="18px"
                         [readonly]="true">
                         </star-rating>
-                        <span> ({{ product.qtyReviews }}) avaliações</span>
+                        <span> ({{ product.qtyReviews }}) {{product.qtyReviews>1?'avaliações':'avaliação'}}</span>
                     </div>
                     
                 </div>

@@ -1,12 +1,16 @@
 <div class="container__review">
     <div>
-        <h1>Review</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum voluptatum eveniet eaque dolorem porro placeat repellendus. Molestiae earum aliquam perspiciatis minima, in deleniti unde rem officia illo suscipit excepturi itaque.</p>
-        <span><img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-            <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-            <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-            <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-            <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-        </span><span> (120)</span>
+        <h1>{{ review.title }}</h1>
+        <p> {{ review.description }}</p>
+        <div class="star">
+            <star-rating 
+            [value]="review.rate"
+            [totalstars]="5"
+            checkedcolor="#F2C832"
+            uncheckedcolor="gray"
+            size="18px"
+            [readonly]="true">
+            </star-rating>
+        </div>
     </div>
 </div>
