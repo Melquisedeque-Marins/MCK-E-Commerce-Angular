@@ -1,17 +1,22 @@
 <div class="container__product-details">
-    <h1>Produto</h1>
     <div class="product-details-info">
+        <h2 class="title">Produto</h2>
         <app-product-card-details [product]="productDetail"></app-product-card-details>
     </div>
-    <hr>
-    <h2>Avaliações</h2>
+    <app-banner></app-banner>
     <div class="container__review">
-        <div class="review-sumary">
-            <app-review-sumary></app-review-sumary>
-        </div>
-        <div class="review-list">
-            <div *ngFor="let review of reviews">
-                <app-review-card [review]="review"></app-review-card>
+        <h2 class="title">Avaliações</h2>
+        <div class="review-content">
+            <div class="review-sumary">
+                <app-review-sumary [product]="productDetail"></app-review-sumary>
+            </div>
+            <div class="review-list">
+                <div class="review-list-title">
+                    <h3>comentários</h3>
+                </div>
+                <div class="review-list-card" *ngFor="let review of reviews">
+                    <app-review-card [review]="review"></app-review-card>
+                </div>
             </div>
         </div>
     </div>

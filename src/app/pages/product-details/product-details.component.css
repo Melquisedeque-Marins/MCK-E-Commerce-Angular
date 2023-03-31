@@ -1,25 +1,59 @@
-
-
 .container__product-details {
-    width: 90%;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .product-details-info {
-    margin-bottom: 50px;
+    padding: 0 40px;
+    margin-bottom: 30px;
 }
 
 .container__review {
+    margin-bottom: 40px;
+    padding: 0 40px;
+}
+
+.title {
+    color: #231F1E;
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.review-content {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin: 50px auto;
+    justify-content: space-between;
+    margin: auto;
 }
 
 .review-sumary {
-
+    width: 25%;
+    margin-right: 40px;
 }
 
 .review-list {
-
+    width: 75%;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    border: 1px solid #d4d8d8c1;
+    border-radius: 20px;
 }
+
+.review-list-title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    border-bottom: 1px solid #F5F6F6;
+    margin-bottom: 20px;
+}
+
+.review-list-title h3 {
+    color: #231F1E;
+}
+
+.review-list-card {
+    background-color: #F5F6F6;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+

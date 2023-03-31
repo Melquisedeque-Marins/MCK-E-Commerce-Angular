@@ -4,17 +4,17 @@
     </div>
     <div class="review-sumary-info">
         <div class="star-rating">
-            <span>5.0</span>
+            <span>{{product.rate}}</span>
             <star-rating
-            [value]="5"
+            [value]="product.rate"
             [totalstars]="5"
             checkedcolor="#F2C832"
-            uncheckedcolor="gray"
-            size="30px"
+            uncheckedcolor="#CCC"
+            size="24px"
             [readonly]="true">
             </star-rating>
         </div>
         <hr>
-        <p>Este produto teve 150 avaliações</p>
+        <p>Este produto teve {{ product.qtyReviews}} avaliações</p>
     </div>
 </div>
