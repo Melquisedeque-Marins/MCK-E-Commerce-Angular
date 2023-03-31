@@ -86,9 +86,15 @@
     margin-bottom: 10px;
 }
 
-.content__details-reviews img {
-    height: 12px;
-    margin-right: 3px;
+.star {
+    display: flex;
+    align-items: center;
+}
+
+.star > span {
+    font-size: 12px;
+    color: #333;
+    margin-left: 3px;
 }
 
 .content__details-btn button{

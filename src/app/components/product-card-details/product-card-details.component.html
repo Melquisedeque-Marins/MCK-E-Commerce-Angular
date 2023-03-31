@@ -3,7 +3,8 @@
         <div class="content__left-content">
             <div class="left-content__main-photo">
                <div class="main-photo__background">
-                    <img src="{{ product.coverImg }}" alt="">
+                <span style="color:#FFF; font-size: 50px" >❤</span> 
+                <img src="{{ product.coverImg }}" alt="">
                </div> 
             </div>
             <div class="left-content__other-photos">
@@ -21,12 +22,18 @@
                     <p> {{ product.description }}</p>
                 </div>
                 <div class="content__details-reviews">
-                    <span><img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                        <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                        <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                        <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                        <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                    </span><span> ({{ product.qtyReviews }}) avaliações</span>
+                    <div class="star">
+                        <star-rating 
+                        [value]="product.rate"
+                        [totalstars]="5"
+                        checkedcolor="#F2C832"
+                        uncheckedcolor="gray"
+                        size="18px"
+                        [readonly]="true">
+                        </star-rating>
+                        <span> ({{ product.qtyReviews }}) avaliações</span>
+                    </div>
+                    
                 </div>
                 <div class="details-title__price">
                     <span class="price__cifrao">R$ </span><span> {{ product.price }}</span> 

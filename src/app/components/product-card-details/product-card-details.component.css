@@ -73,13 +73,24 @@
 
 .content__details-info p {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #333;
     width: 60%;
 }
 
 .content__details-reviews {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.star {
+    display: flex;
+    align-items: center;
+}
+
+.star > span {
+    font-size: 14px;
+    color: #333;
+    margin-left: 5px;
 }
 
 .details-title__price {

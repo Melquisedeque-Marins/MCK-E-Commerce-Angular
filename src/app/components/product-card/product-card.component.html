@@ -18,12 +18,17 @@
                 </a>
             </div>
             <div class="content__details-reviews">
-                <span><img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                    <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                    <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                    <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                    <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9d9ee08987e0ffb064bca_Star.svg" alt="">
-                </span><span> ({{ product.qtyReviews }})</span>
+                <div class="star">
+                    <star-rating 
+                    [value]="product.rate"
+                    [totalstars]="5"
+                    checkedcolor="#F2C832"
+                    uncheckedcolor="gray"
+                    size="16px"
+                    [readonly]="true">
+                    </star-rating>
+                    <span> ({{ product.qtyReviews }})</span>
+                </div>
             </div>
             <div class="content__details-btn">
                 <button>Add to Cart</button>

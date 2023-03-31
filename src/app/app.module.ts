@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductCardDetailsComponent } from './components/product-card-details/product-card-details.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { ReviewsListComponent } from './components/reviews-list/reviews-list.component';
+import { RatingModule } from 'ng-starrating';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ReviewsListComponent } from './components/reviews-list/reviews-list.com
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
