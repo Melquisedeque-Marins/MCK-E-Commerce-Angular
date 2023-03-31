@@ -11,7 +11,7 @@ import { ReviewService } from 'src/app/services/review.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  product!:Product;
+  productDetail!:Product;
   pathVariable!:number
   reviews:Review[] = [];
 
@@ -25,21 +25,22 @@ export class ProductDetailsComponent implements OnInit {
     this.productService.getProduct(this.pathVariable).subscribe( 
       {
         next: (res) => {
-          this.product = res
+          this.productDetail = res
         },
         error: (err) => console.log(err)
     });
+    this.reviewService.getReviewsByProduct(this.pathVariable).subscribe(
+      {
+        next: (res) => {
+          this.reviews = res
+        },
+        error: (err) => console.log(err)
+      }
+    )
   }
 
   getReviews() {
-    this.reviewService.getReviewsByProduct(1).subscribe(
-      {
-        next: (res) => {this.reviews = res
-          console.log(this.reviews)
-        },
-        error: (err) => console.log('review error')
-      }
-    )
+    
   }
 
 }

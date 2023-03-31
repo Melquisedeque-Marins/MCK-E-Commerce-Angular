@@ -1,0 +1,21 @@
+.container__review {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.review__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.review__content h1 {
+    margin-bottom: 5px;
+}
+
+.star {
+    margin-bottom: 10px;
+}
+.review__content p {
+    margin-bottom: 10px;
+}

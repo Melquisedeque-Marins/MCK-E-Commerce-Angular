@@ -1,8 +1,19 @@
 <div class="container__product-details">
-    <app-product-card-details [product]="product"></app-product-card-details>
-
-    <div *ngFor="let review of reviews">
-        <app-reviews-list [review]="review"></app-reviews-list>
+    <h1>Produto</h1>
+    <div class="product-details-info">
+        <app-product-card-details [product]="productDetail"></app-product-card-details>
+    </div>
+    <hr>
+    <h2>Avaliações</h2>
+    <div class="container__review">
+        <div class="review-sumary">
+            <app-review-sumary></app-review-sumary>
+        </div>
+        <div class="review-list">
+            <div *ngFor="let review of reviews">
+                <app-review-card [review]="review"></app-review-card>
+            </div>
+        </div>
     </div>
 </div>
 

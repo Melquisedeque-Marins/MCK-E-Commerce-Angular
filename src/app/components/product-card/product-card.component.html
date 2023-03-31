@@ -2,7 +2,7 @@
     <div class="product-card__content">
         <a [routerLink]="['products', product.id]">
             <div class="content__img">
-                <img src="{{ product.coverImg}}" alt="">
+                <img [src]="product.coverImg" [alt]="product.name">
             </div>
         </a>
         <div class="content__details">

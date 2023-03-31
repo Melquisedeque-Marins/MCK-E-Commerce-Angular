@@ -11,8 +11,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductCardDetailsComponent } from './components/product-card-details/product-card-details.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
-import { ReviewsListComponent } from './components/reviews-list/reviews-list.component';
 import { RatingModule } from 'ng-starrating';
+import { ReviewCardComponent } from './components/review-card/review-card.component';
+import { ReviewSumaryComponent } from './components/review-sumary/review-sumary.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RatingModule } from 'ng-starrating';
     HomeComponent,
     ProductCardDetailsComponent,
     ProductDetailsComponent,
-    ReviewsListComponent
+    ReviewCardComponent,
+    ReviewSumaryComponent
   ],
   imports: [
     BrowserModule,

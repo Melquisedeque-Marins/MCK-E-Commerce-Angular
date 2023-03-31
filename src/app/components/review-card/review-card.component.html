@@ -1,7 +1,6 @@
 <div class="container__review">
-    <div>
-        <h1>{{ review.title }}</h1>
-        <p> {{ review.description }}</p>
+    <div class="review__content">
+        <h1>{{review.title}}</h1>
         <div class="star">
             <star-rating 
             [value]="review.rate"
@@ -12,5 +11,7 @@
             [readonly]="true">
             </star-rating>
         </div>
+        <p> {{ review.description }}</p>
+        <span>{{ review.userName }} em {{ review.createdAt }}</span>
     </div>
 </div>

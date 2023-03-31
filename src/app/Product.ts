@@ -9,3 +9,5 @@ export interface Product {
    rate: number;
    qtyReviews: number;
 }
+
+

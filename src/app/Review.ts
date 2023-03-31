@@ -1,7 +1,8 @@
 export interface Review {
-    userId: number,
+    userName: string,
     productId : string,
     title: string,
     description: string,
-    rate: number
+    rate: number,
+    createdAt: string
 }

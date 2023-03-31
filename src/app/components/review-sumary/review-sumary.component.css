@@ -1,0 +1,27 @@
+
+.container__review-sumary {
+    background-color: #F5F6F6;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.review-sumary__title {
+    margin-bottom: 20px;
+}
+
+.review-sumary-info p {
+    margin-top: 20px;
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.star-rating span {
+    font-size: 36px;
+    font-weight: 700;
+    margin-right: 10px;
+
+}

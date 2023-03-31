@@ -1,0 +1,25 @@
+
+
+.container__product-details {
+    width: 90%;
+    margin: auto;
+}
+
+.product-details-info {
+    margin-bottom: 50px;
+}
+
+.container__review {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 50px auto;
+}
+
+.review-sumary {
+
+}
+
+.review-list {
+
+}

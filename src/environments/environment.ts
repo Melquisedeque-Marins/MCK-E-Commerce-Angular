@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   productApiUrl: 'http://localhost:8083/api/v1/products',
-  reviewApiUrl: 'http://localhost:8084/api/v1/reviews/1'
+  reviewApiUrl: 'http://localhost:8084/api/v1/reviews'
 };
 
 /*
