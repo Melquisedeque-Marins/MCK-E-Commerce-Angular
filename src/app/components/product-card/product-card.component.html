@@ -10,7 +10,7 @@
                 <div class="content__details-title">
                     <h1> {{ product.name }}</h1>
                     <div class="details-title__price">
-                        <span class="price__cifrao">R$ </span><span> {{ product.price}}</span> 
+                        <span class="price__cifrao">€ </span><span> {{ product.price | currency: 'EUR':''}}</span> 
                     </div>
                 </div>
                 <a [routerLink]="['products', product.id]">

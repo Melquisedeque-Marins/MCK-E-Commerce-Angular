@@ -3,8 +3,8 @@
         <div class="content__left-content">
             <div class="left-content__main-photo">
                <div class="main-photo__background">
-                <span style="color:#FFF; font-size: 50px" >❤</span> 
-                <img [src]="product.coverImg" [alt]="product.name">
+                    <span class="background-favourite-icon">❤</span> 
+                    <img [src]="product.coverImg" [alt]="product.name">
                </div> 
             </div>
             <div class="left-content__other-photos">
@@ -27,7 +27,7 @@
                         [value]="product.rate"
                         [totalstars]="5"
                         checkedcolor="#F2C832"
-                        uncheckedcolor="gray"
+                        uncheckedcolor="#CCC"
                         size="18px"
                         [readonly]="true">
                         </star-rating>
@@ -36,7 +36,7 @@
                     
                 </div>
                 <div class="details-title__price">
-                    <span class="price__cifrao">R$ </span><span> {{ product.price }}</span> 
+                    <span class="price__cifrao"></span><span> {{ product.price | currency: 'EUR'}}</span> 
                 </div>
                 <div class="content__details-add-cart">
                     <div class="content__counter-items">

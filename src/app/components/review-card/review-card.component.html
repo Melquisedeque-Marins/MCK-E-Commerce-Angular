@@ -12,6 +12,6 @@
             </star-rating>
         </div>
         <p> {{ review.description }}</p>
-        <span>{{ review.userName }} em {{ review.createdAt }}</span>
+        <span>{{ review.userName }} em {{ review.createdAt | date : 'dd/MM/yyyy HH:mm'}}</span> 
     </div>
 </div>

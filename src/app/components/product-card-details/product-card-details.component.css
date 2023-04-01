@@ -22,11 +22,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     background-color: #F5F6F6;
     height: 400px;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 10px;
+}
+
+.background-favourite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #CCC;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.background-favourite-icon:hover {
+    color: #F80032;
+    transition: .4s;
 }
 
 .main-photo__background img{
