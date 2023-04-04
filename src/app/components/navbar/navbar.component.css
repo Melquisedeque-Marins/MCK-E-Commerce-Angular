@@ -26,12 +26,35 @@
     color: #8a8484;
 }
 
-.navbar__search-box > input{
-    padding: 10px 20px;
+.navbar__search-box {
+    padding: 8px 16px;
     border: 1px solid #aaa;
     background-color: #F5F6F6;
     border-radius: 25px;
+    margin-right: 20px;
 }
+
+.navbar__search-box form {
+   display: flex;
+}
+
+.navbar__search-box input{
+    border: unset;
+    color: #231F1E;
+    background-color: #F5F6F6;
+    outline: none!important;
+}
+
+.navbar__search-box button{
+    border: unset;
+    background-color: #F5F6F6;
+    cursor: pointer;
+}
+
+.navbar__search-box button:hover {
+    color: red;
+}
+
 
 .navbar__login {
     display: flex;

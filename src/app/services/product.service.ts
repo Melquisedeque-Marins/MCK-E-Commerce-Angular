@@ -11,6 +11,7 @@ import { SpringPage } from '../SpringPage';
 })
 export class ProductService {
   private baseApiUrl:string = environment.productApiUrl;
+  name:string = 'e';
 
   constructor(private http: HttpClient) { }
 
@@ -19,6 +20,6 @@ export class ProductService {
   }
 
   getAllProducts():Observable<SpringPage<Product>> {
-    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=0&size=10`);
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?name=${this.name}&page=0&size=10`);
   }
 }

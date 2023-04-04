@@ -31,7 +31,7 @@
                         size="18px"
                         [readonly]="true">
                         </star-rating>
-                        <span> ({{ product.qtyReviews }}) {{product.qtyReviews>1?'avaliações':'avaliação'}}</span>
+                        <span> ({{ product.qtyReviews }}) {{product.qtyReviews!=1?'avaliações':'avaliação'}}</span>
                     </div>
                     
                 </div>
