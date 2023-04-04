@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,8 +9,14 @@ import { Route, Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   form!: FormGroup;
+  searchTerm:string = '';
 
-  constructor(private formBuilder: FormBuilder, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private activatedRoute: ActivatedRoute) {
+    activatedRoute.params.subscribe((params) => {
+      if(params['searchTerm'])
+      this.searchTerm = params['searchTerm'];
+    })
+   }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
@@ -18,8 +24,9 @@ export class NavbarComponent implements OnInit {
     })
   }
 
-  search() {
-    this.router.navigate(['/products/search'])
+  search(searchTerm:string): void {
+    if(searchTerm)
+    this.router.navigate([`/products/filter/${searchTerm}`])
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { Product } from 'src/app/Product';
 
@@ -15,16 +16,28 @@ export class HomeComponent implements OnInit {
   productList: Product[] = [];
   page!:SpringPage<Product>;
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.productService.getAllProducts().subscribe(
-      {
-        next: (res) => {
-          this.productList = res.content
-        },
-        error: (err) => console.log(err)
-    });
+    this.activatedRoute.params.subscribe((params) => {
+      if(params['searchTerm']){
+        this.productService.getAllProductsBySearchTerme(params['searchTerm']).subscribe(
+          {
+            next: (res) => {
+              this.productList = res.content
+            },
+            error: (err) => console.log(err)
+        })
+      } else {
+        this.productService.getAllProducts().subscribe(
+          {
+            next: (res) => {
+              this.productList = res.content
+            },
+            error: (err) => console.log(err)
+        })
+      }
+    })
   }
   /*
   ngOnInit(): void {

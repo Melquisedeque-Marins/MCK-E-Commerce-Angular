@@ -11,8 +11,8 @@
         </ul>
         <div class="navbar__search-box">
             <form [formGroup]="form">
-                <input id="name" type="text" formControlName="name" placeholder="Search Product">
-                <button (click)="search()" type="submit" [disabled]="!form.valid"><img src="../../../assets/search-Icon.svg" alt=""></button>
+                <input #name id="name" type="text" formControlName="name" placeholder="Search Product">
+                <button (click)="search(name.value)" type="submit" ><img src="../../../assets/search-Icon.svg" alt=""></button>
             </form>
         </div>
         <div class="navbar__login">
