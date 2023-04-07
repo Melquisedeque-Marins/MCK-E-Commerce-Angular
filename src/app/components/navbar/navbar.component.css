@@ -28,10 +28,11 @@
 
 .navbar__search-box {
     padding: 8px 16px;
-    border: 1px solid #aaa;
+    border: 1px solid #F5F6F6;
     background-color: #F5F6F6;
     border-radius: 25px;
     margin-right: 20px;
+    max-width: 300px;
 }
 
 .navbar__search-box form {

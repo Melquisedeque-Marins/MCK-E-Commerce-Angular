@@ -26,7 +26,7 @@ export class NavbarComponent implements OnInit {
 
   search(searchTerm:string): void {
     if(searchTerm)
-    this.router.navigate([`/products/filter/${searchTerm}`])
+    this.router.navigate([`/busca/${searchTerm}`])
   }
 
 }

@@ -5,8 +5,8 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'busca/:searchTerm', component: HomeComponent},
   {path: 'products/:id', component: ProductDetailsComponent},
-  {path: 'products/filter/:searchTerm', component: HomeComponent},
 ];
 
 @NgModule({
