@@ -18,6 +18,7 @@ import { ReviewSumaryComponent } from './components/review-sumary/review-sumary.
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { CategoriesBadgeComponent } from './components/categories-badge/categories-badge.component';
 
 registerLocaleData(ptBr);
 
@@ -33,6 +34,7 @@ registerLocaleData(ptBr);
     ProductDetailsComponent,
     ReviewCardComponent,
     ReviewSumaryComponent,
+    CategoriesBadgeComponent,
   ],
   imports: [
     BrowserModule,
