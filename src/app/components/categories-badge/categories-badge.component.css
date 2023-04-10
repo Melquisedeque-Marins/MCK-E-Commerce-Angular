@@ -1,0 +1,15 @@
+.container__category-badge {
+    display: flex;
+    justify-content: center;
+}
+
+.category-badge__content {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500px;
+    color: #333;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 30px;
+    cursor: pointer;
+}

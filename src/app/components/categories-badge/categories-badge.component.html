@@ -1,1 +1,8 @@
-<div *ngFor="let cat of categoryList"> {{cat.name}}</div>
+
+<div class="container__category-badge">
+    <div  *ngFor="let cat of categoryList">
+        <div class="category-badge__content">
+            {{cat.name}}
+        </div>
+    </div>
+</div>
