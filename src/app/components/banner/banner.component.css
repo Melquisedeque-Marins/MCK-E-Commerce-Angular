@@ -18,7 +18,7 @@
 .banner__content-left {
     display: flex;
     flex-direction: column;
-    color: #FFF;
+    color: #333;
 }
 
 .banner__content-left h1 {

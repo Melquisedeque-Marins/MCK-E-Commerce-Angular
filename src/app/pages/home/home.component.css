@@ -7,16 +7,28 @@
 .product-card__title {
     margin: auto;
     margin-top: 30px;
+    margin-bottom: 30px;
     color: #231F1E;
     width: 90%;
 }
 
 .content__product-card {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 30px;
     width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.content__category-card {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 30px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
 }
 

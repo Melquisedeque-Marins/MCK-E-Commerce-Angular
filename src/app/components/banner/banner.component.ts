@@ -8,10 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class BannerComponent implements OnInit {
   @Input() background:string = '';
   @Input() buttonColor:string = '';
+  @Input() buttonHoverColor:string = '';
   @Input() direction:string = '';
   @Input() bannerImg:string = '';
   @Input() bannerTitle:string = '';
   @Input() bannerText:string = '';
+  @Input() textColor:string = '';
 
   constructor() { }
 

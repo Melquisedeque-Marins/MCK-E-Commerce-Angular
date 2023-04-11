@@ -1,9 +1,9 @@
 <div [ngStyle]="{'background':background}"  class="container__banner">
-    <div [ngStyle]="{'flex-direction':direction}"   class="banner__content">
+    <div [ngStyle]="{'flex-direction':direction}" class="banner__content">
         <div class="banner__content-left">
-            <h1> {{bannerTitle}} </h1>
-            <p> {{ bannerText }}</p>
-            <a routerLink="/teste"><button [ngStyle]="{'background':buttonColor, 'border': buttonColor}"> Learn More </button></a>
+            <h1 [ngStyle]="{'color':textColor}"> {{bannerTitle}} </h1>
+            <p [ngStyle]="{'color':textColor}"> {{ bannerText }}</p>
+            <a routerLink="/teste"><button [ngStyle]="{'background':buttonColor, 'border': buttonColor, 'button:hover':buttonHoverColor}"> Learn More </button></a>
             
         </div>
         <div class="banner__content-right">

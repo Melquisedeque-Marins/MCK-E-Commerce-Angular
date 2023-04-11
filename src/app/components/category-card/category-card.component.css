@@ -1,0 +1,28 @@
+.category-card__content {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    max-width: 250px;
+    overflow: hidden;
+}
+
+.category-card__content img{
+    width: 100%;
+    margin: auto;
+}
+
+.category-card__content img:hover {
+    transform: scale(1.10);
+    transition: .5s;
+    margin: auto;
+}
+
+.category-card__content h2{
+    position: absolute;
+    top: 30px;
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
+    color: #FFF;
+}
