@@ -1,7 +1,7 @@
 .container__banner {
     display: flex;
     justify-content: center;
-    background-color: #FFE6CC;
+    background-color: rgba(40, 40, 205, 0.733);
     margin-bottom: 20px;
 }
 
@@ -18,13 +18,17 @@
 .banner__content-left {
     display: flex;
     flex-direction: column;
-    color: #333;
+    color: #FFF;
 }
 
 .banner__content-left h1 {
     font-size: 52px;
     margin-bottom: 20px;
 }
+
+.banner__content-left h1::first-letter {
+    text-transform: uppercase;
+  }
 
 .banner__content-left p {
     font-size: 20px;
@@ -49,9 +53,6 @@
     color: #FFF;
     background-color: #231F1E;
     transition: .5s;
-}
-
-.banner__content-right {
 }
 
 .banner__content-right img {

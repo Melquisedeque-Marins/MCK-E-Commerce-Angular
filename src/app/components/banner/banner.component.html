@@ -1,13 +1,13 @@
-<div class="container__banner">
-    <div class="banner__content">
+<div [ngStyle]="{'background':background}"  class="container__banner">
+    <div [ngStyle]="{'flex-direction':direction}"   class="banner__content">
         <div class="banner__content-left">
-            <h1> Get 5% Cash Back </h1>
-            <p>on Shopcart.com</p>
-            <a routerLink="/teste"><button> Learn More </button></a>
+            <h1> {{bannerTitle}} </h1>
+            <p> {{ bannerText }}</p>
+            <a routerLink="/teste"><button [ngStyle]="{'background':buttonColor, 'border': buttonColor}"> Learn More </button></a>
             
         </div>
         <div class="banner__content-right">
-            <img src="https://cdn-icons-png.flaticon.com/512/3176/3176101.png" alt="">
+            <img [src]="bannerImg" alt="">
         </div>
     </div>
 </div>
