@@ -30,14 +30,30 @@
     margin: auto;
 }
 
+
 .content__img {
+    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #F5F6F6;
     margin-bottom: 12px;
     border-radius: 10px;
     height: 250px;
+    overflow: hidden;
+}
+.discount-tag {
+    position: absolute;
+    text-align: center;
+    justify-self: center;
+    background-color: rgb(32, 164, 32);
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    top:0;
+    width: 100%;
+    padding: 4px 0;
 }
 
 .content__img img {

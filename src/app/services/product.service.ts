@@ -19,10 +19,10 @@ export class ProductService {
   }
 
   getAllProducts():Observable<SpringPage<Product>> {
-    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=0&size=10`);
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=0&size=15`);
   }
 
   getAllProductsBySearchTerme(searchTerm:string) {
-    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?name=${searchTerm}&page=0&size=10`);
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?name=${searchTerm}&page=0&size=13`);
   }
 }

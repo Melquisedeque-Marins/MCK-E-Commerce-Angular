@@ -8,6 +8,9 @@ export interface Product {
    coverImg: string;
    rate: number;
    qtyReviews: number;
+   isInSale: boolean;
+   promotionalPrice: number;
+   discountValue: number;
 }
 
 

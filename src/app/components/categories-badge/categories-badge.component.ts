@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Category } from 'src/app/Category';
 import { CategoryService } from 'src/app/services/category.service';
 
@@ -8,17 +8,12 @@ import { CategoryService } from 'src/app/services/category.service';
   styleUrls: ['./categories-badge.component.css']
 })
 export class CategoriesBadgeComponent implements OnInit {
-categoryList:Category[] =  [];
+@Input() categoryList:Category[] =  [];
 
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.categoryService.getCategories().subscribe({
-      next: res =>  {
-         this.categoryList = res;
-      }
-      
-    })
+    
   }
 
 }

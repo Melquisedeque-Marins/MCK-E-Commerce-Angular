@@ -2,6 +2,9 @@
     <div class="product-card__content">
         <a [routerLink]="['/products', product.id]">
             <div class="content__img">
+                <div class="discount-tag" *ngIf="product.isInSale">
+                    <span  >{{ product.discountValue}}% </span><span>de desconto</span>
+                </div>
                 <img [src]="product.coverImg" [alt]="product.name">
             </div>
         </a>

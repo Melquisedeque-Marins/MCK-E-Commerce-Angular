@@ -1,7 +1,7 @@
 <div class="container__home">
     <div class="home__content">
         <div class="content__category-badge">
-            <app-categories-badge></app-categories-badge>
+            <app-categories-badge [categoryList]="categoryList"></app-categories-badge>
         </div>
         <div class="content__banner">
             <app-banner 
@@ -11,7 +11,7 @@
             textColor="#FFF">
             </app-banner>
         </div>
-        <div class="product-card__title">
+        <div class="section__title">
             <h1>Produtos para você!</h1>
         </div>
         <div class="content__product-card">
@@ -29,34 +29,15 @@
             >
             </app-banner>
         </div>
-        <div class="product-card__title">
+        <div class="section__title">
             <h1>Veja  nossas categorias mais visitadas!</h1>
         </div>
         <div class="content__category-card">
-            <app-category-card 
-            cardImg="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e570738029a725e686_Furniture-min.png" 
-            cardTitle="Movéis"
-            ></app-category-card>
-            <app-category-card
-            cardImg="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e460afc22b7ea53520_books-min.png" 
-            cardTitle="Livros"
-            ></app-category-card>
-            <app-category-card
-            cardImg="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e754ac2e32897cb53b_tech-min.png"
-            cardTitle="informática"
-            ></app-category-card>
-            <app-category-card
-            cardImg="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e64b769118272f244f_sneakers-min.png"
-            cardTitle="Moda"
-            ></app-category-card>
-            <app-category-card
-            cardImg="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e71eb4ad6d07e7568f_travel-min.png"
-            cardTitle="Viagens"
-            ></app-category-card>
-            <app-category-card
-            cardImg="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e8c4e52d6553668075697e_hand%20bag-min.png"
-            cardTitle="Bolsas"
-            ></app-category-card>
+            <div *ngFor="let category of categoryList; let i = index" >
+                <div *ngIf="i < 6">
+                    <app-category-card [category]="category"></app-category-card>
+                </div>
+            </div>
         </div>
     </div>
 </div>

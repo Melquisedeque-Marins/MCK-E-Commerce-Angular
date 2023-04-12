@@ -1,7 +1,9 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Category } from 'src/app/Category';
 
 import { Product } from 'src/app/Product';
+import { CategoryService } from 'src/app/services/category.service';
 
 import { ProductService } from 'src/app/services/product.service';
 import { SpringPage } from 'src/app/SpringPage';
@@ -14,9 +16,10 @@ import { SpringPage } from 'src/app/SpringPage';
 export class HomeComponent implements OnInit {
   product!:Product;
   productList: Product[] = [];
+  categoryList: Category[] = [];
   page!:SpringPage<Product>;
 
-  constructor(private productService: ProductService, private activatedRoute:ActivatedRoute) { }
+  constructor(private productService: ProductService, private categoryService: CategoryService ,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
@@ -38,27 +41,13 @@ export class HomeComponent implements OnInit {
         })
       }
     })
-  }
-  /*
-  ngOnInit(): void {
-    this.productService.getProduct(1).subscribe(
-      {
-        next: (res) => {
-          this.product = {
-            id: res.id,
-            name: res.name,
-            description: res.description,
-            price: res.price,
-            imgUrl: res.imgUrl,
-            coverImg: res.coverImg,
-            qtyReviews: res.qtyReviews,
-            rate: res.rate,
-            skuCode: res.skuCode
-          }
-        },
-        error: (err) => console.log('error')
-    });
-  }
-*/
 
-}
+    this.categoryService.getCategories().subscribe({
+      next: res =>  {
+         this.categoryList = res;
+      }
+      
+    })
+  }
+
+ }
