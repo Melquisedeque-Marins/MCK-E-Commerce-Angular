@@ -3,13 +3,14 @@
     justify-content: center;
     position: relative;
     border-radius: 20px;
-    max-width: 250px;
+    max-width: 220px;
     overflow: hidden;
 }
 
 .category-card__content img{
     width: 100%;
     margin: auto;
+    cursor: pointer;
 }
 
 .category-card__content img:hover {
@@ -22,7 +23,7 @@
     position: absolute;
     top: 30px;
     margin: 0 auto;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #FFF;
     text-transform: capitalize;

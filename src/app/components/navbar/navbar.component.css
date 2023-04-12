@@ -32,11 +32,13 @@
     background-color: #F5F6F6;
     border-radius: 25px;
     margin-right: 20px;
-    max-width: 300px;
+    width: 300px;
+    max-width: 400px;
 }
 
 .navbar__search-box form {
    display: flex;
+   justify-content: space-between;
 }
 
 .navbar__search-box input{

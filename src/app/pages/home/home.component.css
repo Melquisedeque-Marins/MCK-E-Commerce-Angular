@@ -8,7 +8,7 @@
     font-size: 14px;
     margin: auto;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     color: #231F1E;
     width: 90%;
 }
@@ -25,8 +25,8 @@
 
 .content__category-card {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     margin-top: 30px;
     width: 90%;
     margin: auto;

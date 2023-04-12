@@ -16,6 +16,7 @@ import { SpringPage } from 'src/app/SpringPage';
 export class HomeComponent implements OnInit {
   product!:Product;
   productList: Product[] = [];
+  promoProductsList: Product[] = [];
   categoryList: Category[] = [];
   page!:SpringPage<Product>;
 
@@ -42,9 +43,19 @@ export class HomeComponent implements OnInit {
       }
     })
 
+    this.productService.getAllPromoProducts().subscribe(
+      {
+        next: (res) => {
+          this.promoProductsList = res.content;
+          console.log(res)
+        },
+        error: (err) => console.log(err)
+    })
+
     this.categoryService.getCategories().subscribe({
       next: res =>  {
          this.categoryList = res;
+         
       }
       
     })
