@@ -5,15 +5,16 @@
         </div>
         <div class="content__banner">
             <app-banner 
-            bannerTitle = 'Get 5% Cash Back' 
-            bannerText="on Shopcart.com"
-            bannerImg='https://cdn-icons-png.flaticon.com/512/3176/3176101.png'
-            textColor="#FFF">
+            bannerTitle = 'Nova LG Smart TV 8k' 
+            bannerText="Desfrute dos melhores filmes e series com uma smartTV LG."
+            bannerImg ='https://cdn.shopify.com/s/files/1/2700/1230/products/SmartTVLG32LQ630B6LED32HD-11_grande.png?v=1649325086' direction="row-reverse" background="#CCC" buttonColor=""
+            buttonHoverColor='#CCC'
+            direction="row-reverse"
+            >
             </app-banner>
+          
         </div>
-        <div class="section__title">
-            <h1>Produtos para você!</h1>
-        </div>
+        <app-section-title title="Produtos para você!"></app-section-title>
         <div class="content__product-card">
             <div *ngFor="let item of productList">
                 <app-product-card [product]="item"></app-product-card>
@@ -29,9 +30,7 @@
             >
             </app-banner>
         </div>
-        <div class="section__title">
-            <h1>Veja  nossas categorias mais visitadas!</h1>
-        </div>
+        <app-section-title title="Veja  nossas categorias mais visitadas!"></app-section-title>
         <div class="content__category-card">
             <div *ngFor="let category of categoryList; let i = index" >
                 <div *ngIf="i < 6">
@@ -39,13 +38,17 @@
                 </div>
             </div>
         </div>
-        <div class="section__title">
-            <h1>Ofertas por tempo limitado!</h1>
-        </div>
+        <app-section-title title="Ofertas por tempo limitado!"></app-section-title>
         <div class="content__product-card" >
             <div *ngFor="let item of promoProductsList; let i =index">
                 <app-product-card *ngIf="i < 5" [product]="item"></app-product-card>
             </div>
         </div>
+        <app-banner 
+        bannerTitle = 'Get 5% Cash Back' 
+        bannerText="on Shopcart.com"
+        bannerImg='https://cdn-icons-png.flaticon.com/512/3176/3176101.png'
+        textColor="#FFF">
+        </app-banner>
     </div>
 </div>

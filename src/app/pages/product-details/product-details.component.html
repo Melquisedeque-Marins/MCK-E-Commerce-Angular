@@ -7,9 +7,21 @@
     direction="row-reverse"
     >
     </app-banner>
+    <app-section-title title="Produtos em promoção!"></app-section-title>
     <div class="product-details-info">
-        <h2 class="title">Produto</h2>
         <app-product-card-details [product]="productDetail"></app-product-card-details>
+    </div>
+    <app-section-title title="Produtos relacionados!"></app-section-title>
+    <div class="content__product-card">
+        <div *ngFor="let item of relatedProductsList; let i =index">
+            <app-product-card *ngIf="i < 5" [product]="item"></app-product-card>
+        </div>
+    </div>
+    <app-section-title title="Produtos em promoção!"></app-section-title>
+    <div class="content__product-card" >
+        <div *ngFor="let item of promoProductsList; let i =index">
+            <app-product-card *ngIf="i < 5" [product]="item"></app-product-card>
+        </div>
     </div>
     <hr>
     <div class="container__review">

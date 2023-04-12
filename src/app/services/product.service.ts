@@ -22,8 +22,12 @@ export class ProductService {
     return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=0&size=10`);
   }
 
-  getAllPromoProducts():Observable<SpringPage<Product>> {
-    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?isInSale=true`);
+  getAllPromoProducts(catId:number):Observable<SpringPage<Product>> {
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?categoryId=${catId}&isInSale=true`);
+  }
+
+  getAllRelatedProducts(catId:number):Observable<SpringPage<Product>> {
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?categoryId=${catId}`);
   }
 
   getAllProductsBySearchTerme(searchTerm:string) {

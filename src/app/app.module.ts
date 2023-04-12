@@ -20,6 +20,7 @@ import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { CategoriesBadgeComponent } from './components/categories-badge/categories-badge.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
+import { SectionTitleComponent } from './components/section-title/section-title.component';
 
 registerLocaleData(ptBr);
 
@@ -37,6 +38,7 @@ registerLocaleData(ptBr);
     ReviewSumaryComponent,
     CategoriesBadgeComponent,
     CategoryCardComponent,
+    SectionTitleComponent,
   ],
   imports: [
     BrowserModule,

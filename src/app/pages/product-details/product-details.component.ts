@@ -12,8 +12,11 @@ import { ReviewService } from 'src/app/services/review.service';
 })
 export class ProductDetailsComponent implements OnInit {
   productDetail!:Product;
+  promoProductsList: Product[] = [];
+  relatedProductsList: Product[] = [];
   pathVariable!:number
   reviews:Review[] = [];
+  
 
   constructor( private productService: ProductService, private reviewService: ReviewService, private route: ActivatedRoute) { 
     this.route.params.subscribe(
@@ -37,6 +40,23 @@ export class ProductDetailsComponent implements OnInit {
         error: (err) => console.log(err)
       }
     )
+      
+    this.productService.getAllRelatedProducts(1).subscribe(
+      {
+        next: (res) => {
+          this.relatedProductsList = res.content;
+          console.log(this.productDetail.categories[0].id);
+        },
+        error: (err) => console.log(err)
+    })
+
+    this.productService.getAllPromoProducts(1).subscribe(
+      {
+        next: (res) => {
+          this.promoProductsList = res.content;
+        },
+        error: (err) => console.log(err)
+    })
   }
 
   getReviews() {

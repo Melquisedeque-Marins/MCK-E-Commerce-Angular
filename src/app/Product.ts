@@ -1,3 +1,5 @@
+import { Category } from "./Category";
+
 export interface Product {
    id: number;
    name: string;
@@ -11,6 +13,7 @@ export interface Product {
    isInSale: boolean;
    promotionalPrice: number;
    discountValue: number;
+   categories: Category[];
 }
 
 

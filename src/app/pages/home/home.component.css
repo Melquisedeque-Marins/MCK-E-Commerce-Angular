@@ -4,19 +4,10 @@
     margin-top: 15px;
 }
 
-.section__title {
-    font-size: 14px;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    color: #231F1E;
-    width: 90%;
-}
-
 .content__product-card {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     margin-top: 30px;
     width: 90%;
     margin: auto;

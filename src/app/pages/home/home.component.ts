@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
       }
     })
 
-    this.productService.getAllPromoProducts().subscribe(
+    this.productService.getAllPromoProducts(0).subscribe(
       {
         next: (res) => {
           this.promoProductsList = res.content;
