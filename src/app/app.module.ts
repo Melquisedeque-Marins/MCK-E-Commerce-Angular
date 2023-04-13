@@ -21,6 +21,9 @@ import { registerLocaleData } from '@angular/common';
 import { CategoriesBadgeComponent } from './components/categories-badge/categories-badge.component';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { SectionTitleComponent } from './components/section-title/section-title.component';
+import { ItemCartComponent } from './components/item-cart/item-cart.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { GenericButtonComponent } from './shared/generic-button/generic-button.component';
 
 registerLocaleData(ptBr);
 
@@ -39,6 +42,9 @@ registerLocaleData(ptBr);
     CategoriesBadgeComponent,
     CategoryCardComponent,
     SectionTitleComponent,
+    ItemCartComponent,
+    CartComponent,
+    GenericButtonComponent,
   ],
   imports: [
     BrowserModule,
