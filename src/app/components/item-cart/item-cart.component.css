@@ -1,7 +1,6 @@
 
 .item-cart__content {
     padding: 10px;
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 100px minmax(100px, 1fr) minmax(min-content, 130px) 100px;
     column-gap: 10px;
@@ -25,7 +24,7 @@
     text-align: left;
     font-weight: 700;
     color: #5A5D5A;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .content__add-cart {

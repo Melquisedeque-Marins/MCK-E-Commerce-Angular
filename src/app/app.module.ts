@@ -24,6 +24,7 @@ import { SectionTitleComponent } from './components/section-title/section-title.
 import { ItemCartComponent } from './components/item-cart/item-cart.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { GenericButtonComponent } from './shared/generic-button/generic-button.component';
+import { OrderSumaryComponent } from './components/order-sumary/order-sumary.component';
 
 registerLocaleData(ptBr);
 
@@ -45,6 +46,7 @@ registerLocaleData(ptBr);
     ItemCartComponent,
     CartComponent,
     GenericButtonComponent,
+    OrderSumaryComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,2 +1,19 @@
+<app-banner 
+bannerTitle = 'Get 5% Cash Back' 
+bannerText="on Shopcart.com"
+bannerImg='https://cdn-icons-png.flaticon.com/512/3176/3176101.png'
+textColor="#FFF">
+</app-banner>
 <app-section-title title="meu carrinho"></app-section-title>
-<app-item-cart></app-item-cart>
+<div class="container__cart">
+    <div class="cart__content">
+        <div class="content__left">
+            <app-item-cart></app-item-cart>
+            <app-item-cart></app-item-cart>
+            <app-item-cart></app-item-cart>
+        </div>
+        <div class="content__left">
+            <app-order-sumary></app-order-sumary>
+        </div>
+    </div>
+</div>

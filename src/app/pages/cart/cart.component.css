@@ -1,0 +1,10 @@
+.cart__content {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr min-content;
+}
+
+.container__cart {
+    width: 90%;
+    margin: 0 auto;
+}
