@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cart } from 'src/app/Cart';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-order-sumary',
@@ -6,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-sumary.component.css']
 })
 export class OrderSumaryComponent implements OnInit {
-
-  constructor() { }
-
+  
+  cart!: Cart;
+  constructor(private cartService: CartService) {
+    this.cartService.getCartObservable().subscribe((cart) => {
+      this.cart = cart;
+    })
+   }
   ngOnInit(): void {
   }
 

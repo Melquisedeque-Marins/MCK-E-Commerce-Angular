@@ -2,11 +2,11 @@
     <app-section-title title="meu carrinho"></app-section-title>
     <div class="cart__content">
         <div class="content__left">
-            <app-item-cart></app-item-cart>
-            <app-item-cart></app-item-cart>
-            <app-item-cart></app-item-cart>
+            <div  *ngFor="let item of cart.items">
+                <app-item-cart [cartItem]="item"></app-item-cart>
+            </div>
         </div>
-        <div class="content__left">
+        <div class="content__right">
             <app-order-sumary></app-order-sumary>
         </div>
     </div>

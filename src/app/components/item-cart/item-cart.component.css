@@ -7,6 +7,7 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+    min-height: 150px;
 }
 
 .content__product-card {
@@ -19,8 +20,8 @@
 }
 
 .product-card__text {
-    margin-top: 10px;
     display: flex;
+    align-items: center;
     text-align: left;
     font-weight: 700;
     color: #5A5D5A;

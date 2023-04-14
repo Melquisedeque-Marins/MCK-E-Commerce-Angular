@@ -20,7 +20,8 @@ export class ProductCardComponent implements OnInit {
   }
 
   addToCart() {
-    this.router.navigateByUrl('/cart');
+    this.cartService.addToCart(this.product)
+    this.router.navigateByUrl('/cart')
   }
 
 }

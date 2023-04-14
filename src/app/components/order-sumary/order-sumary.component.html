@@ -2,11 +2,11 @@
     <div class="order-sumary__content">
         <app-section-title title="resumo do pedido"></app-section-title>
         <div class="content__sumary-items">
-            <span class="total-price-qty" >2 produtos</span> <span class="total-price-value">R$ 2.141,50</span>
+            <span class="total-price-qty" >{{ cart.totalCount }} {{ cart.totalCount!=1?'produtos':'produto'}}</span> <span class="total-price-value">{{ cart.totalPrice | currency: 'EUR' }}</span>
         </div>
         <hr>
         <div class="content__total-price">
-            <span >Total</span> <span>R$ 2.141,50</span>
+            <span >Total</span> <span>{{ cart.totalPrice | currency: 'EUR' }}</span>
         </div>
         <hr>
         <div class="content__confirm-button">

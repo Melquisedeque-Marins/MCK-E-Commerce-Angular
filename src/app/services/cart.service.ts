@@ -19,7 +19,7 @@ export class CartService {
   }
 
   removeToCart(itemId:number): void {
-    this.cart.items = this.cart.items.filter(p => p.product.price === itemId);
+    this.cart.items = this.cart.items.filter(p => p.product.id != itemId);
     this.setCarToLocalStorage();
   }
 

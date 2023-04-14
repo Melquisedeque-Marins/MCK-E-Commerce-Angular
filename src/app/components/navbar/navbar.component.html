@@ -23,8 +23,8 @@
             <a routerLink="/cart">
                 <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63eb3dec9b865e78d4ff6b8d_shopping-cart-add.png" loading="lazy" alt="">
             </a>
-            <div class="cart-notification">
-                <span>1</span>
+            <div class="cart-notification" *ngIf="cart.totalCount">
+                <span>{{cart.totalCount }}</span>
             </div>
         </div>
     </nav>
