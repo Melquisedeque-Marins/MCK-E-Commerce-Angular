@@ -10,15 +10,21 @@
         </a>
         <div class="content__details">
             <div class="content__details-info">
+                <div class="content__details-name">
+                    <a [routerLink]="['products', product.id]">
+                        <p>{{ product.description }} </p>
+                    </a>
+                </div>
                 <div class="content__details-title">
-                    <h1> {{ product.name }}</h1>
-                    <div class="details-title__price">
-                        <span class="price__cifrao">€ </span><span> {{ product.price | currency: 'EUR':''}}</span> 
+                    <div class="details-title__price" >
+                        <div [ngClass]="{'price-original':product.isInSale}">
+                            <span> {{ product.price | currency: 'EUR'}}</span>
+                        </div> 
+                        <div class="price-promo" *ngIf="product.isInSale">
+                            <span > {{ product.promotionalPrice | currency: 'EUR'}}</span>
+                        </div> 
                     </div>
                 </div>
-                <a [routerLink]="['products', product.id]">
-                    <p>{{ product.description }} </p>
-                </a>
             </div>
             <div class="content__details-reviews">
                 <div class="star">
@@ -34,7 +40,7 @@
                 </div>
             </div>
             <div class="content__details-btn">
-                <button>Add to Cart</button>
+                <button (click)="addToCart()">Add to Cart</button>
             </div>
         </div>
     </div>

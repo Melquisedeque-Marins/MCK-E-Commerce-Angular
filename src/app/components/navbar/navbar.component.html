@@ -17,12 +17,19 @@
         </div>
         <div class="navbar__login">
             <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63eb3dec9d6ee83660ebe1de_user.png" loading="lazy" alt="">
-            <a href="">Account</a>
+            <a href="">Login</a>
         </div>
         <div class="navbar__cart">
-            <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63eb3dec9b865e78d4ff6b8d_shopping-cart-add.png" loading="lazy" alt="">
-            <a routerLink="/cart">Cart</a>
+            <a routerLink="/cart">
+                <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63eb3dec9b865e78d4ff6b8d_shopping-cart-add.png" loading="lazy" alt="">
+            </a>
+            <div class="cart-notification">
+                <span>1</span>
+            </div>
         </div>
     </nav>
+    <div class="content__category-badge">
+        <app-categories-badge [categoryList]="categoryList"></app-categories-badge>
+    </div>
 </header>
 

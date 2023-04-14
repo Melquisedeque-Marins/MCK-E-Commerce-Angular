@@ -2,15 +2,16 @@
     <div class="order-sumary__content">
         <app-section-title title="resumo do pedido"></app-section-title>
         <div class="content__sumary-items">
-            <span>2 produtos</span> <span>R$ 2.141,50</span>
-            <hr>
+            <span class="total-price-qty" >2 produtos</span> <span class="total-price-value">R$ 2.141,50</span>
         </div>
+        <hr>
         <div class="content__total-price">
-            <span>2 produtos</span> <span>R$ 2.141,50</span>
+            <span >Total</span> <span>R$ 2.141,50</span>
         </div>
+        <hr>
         <div class="content__confirm-button">
-            <button>teste</button>
-            <span>adicionar mais produtos</span>
+            <app-generic-button width="100%" buttonText="continuar"></app-generic-button>
+            <a routerLink="/"><span>adicionar mais produtos</span></a>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>
     </div>

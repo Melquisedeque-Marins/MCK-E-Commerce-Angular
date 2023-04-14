@@ -20,7 +20,10 @@ export class HomeComponent implements OnInit {
   categoryList: Category[] = [];
   page!:SpringPage<Product>;
 
-  constructor(private productService: ProductService, private categoryService: CategoryService ,private activatedRoute:ActivatedRoute) { }
+  constructor(private productService: ProductService,
+              private categoryService: CategoryService,
+              private activatedRoute:ActivatedRoute,
+              ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {

@@ -10,6 +10,7 @@ export class GenericButtonComponent implements OnInit {
   @Input() buttonHoverColor:string = '';
   @Input() buttonText:string = '';
   @Input() fontSize:string = '';
+  @Input() width:string = '';
 
   constructor() { }
 

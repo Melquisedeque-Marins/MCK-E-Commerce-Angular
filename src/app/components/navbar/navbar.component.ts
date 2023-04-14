@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { Category } from 'src/app/Category';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,8 +12,9 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   form!: FormGroup;
   searchTerm:string = '';
+  categoryList: Category[] = [];
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private activatedRoute: ActivatedRoute) {
+  constructor(private formBuilder: FormBuilder, private categoryService: CategoryService, private router: Router, private activatedRoute: ActivatedRoute) {
     activatedRoute.params.subscribe((params) => {
       if(params['searchTerm'])
       this.searchTerm = params['searchTerm'];
@@ -22,6 +25,11 @@ export class NavbarComponent implements OnInit {
     this.form = this.formBuilder.group({
       name: ['', [Validators.required]]
     })
+    this.categoryService.getCategories().subscribe({
+      next: res =>  {
+         this.categoryList = res;
+      }
+    })
   }
 
   search(searchTerm:string): void {
@@ -30,3 +38,4 @@ export class NavbarComponent implements OnInit {
   }
 
 }
+

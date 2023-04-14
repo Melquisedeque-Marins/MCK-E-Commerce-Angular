@@ -2,17 +2,20 @@
     display: flex;
     justify-content: left;
     padding-left: 50px;
-    margin-bottom: 20px;
 }
 
-.category-badge__content {
+.category-badge__content a {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500px;
     text-transform: capitalize;
     color: #333;
-    border-radius: 10px;
     padding: 5px 10px;
     margin-right: 20px;
     cursor: pointer;
+}
+
+.category-badge__content a:hover {
+   color: #003D29;
+   border-bottom: 2px solid #003D29;
 }
