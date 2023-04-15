@@ -1,6 +1,6 @@
 <div class="container__order-sumary">
     <div class="order-sumary__content">
-        <app-section-title title="resumo do pedido"></app-section-title>
+        <app-section-title title="resumo do pedido" fontSize="24px"></app-section-title>
         <div class="content__sumary-items">
             <span class="total-price-qty" >{{ cart.totalCount }} {{ cart.totalCount!=1?'produtos':'produto'}}</span> <span class="total-price-value">{{ cart.totalPrice | currency: 'EUR' }}</span>
         </div>
@@ -10,7 +10,7 @@
         </div>
         <hr>
         <div class="content__confirm-button">
-            <app-generic-button width="100%" buttonText="continuar"></app-generic-button>
+            <app-generic-button width="100%" buttonText="continuar" ></app-generic-button>
             <a routerLink="/"><span>adicionar mais produtos</span></a>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
         </div>

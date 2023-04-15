@@ -46,6 +46,8 @@ export class HomeComponent implements OnInit {
       }
     })
 
+    this.product = this.productList[0]
+
     this.productService.getAllPromoProducts(0).subscribe(
       {
         next: (res) => {
