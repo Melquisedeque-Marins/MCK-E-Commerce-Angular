@@ -3,7 +3,7 @@
     justify-content: center;
     background-color: #0A164A;
     margin-bottom: 50px;
-    padding: 20px 100px;
+    padding: 10px 100px;
 
 }
 
@@ -74,8 +74,6 @@
 }
 
 
-
-
 .banner__content-left button{
     font-family: Eina01, sans-serif;
     font-size: 18px;
@@ -114,8 +112,6 @@
     transition: 1s;
 }
 
-
-  
 @keyframes slidein {
     from {
         margin-left: 100%;

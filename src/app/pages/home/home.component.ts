@@ -64,10 +64,6 @@ export class HomeComponent implements OnInit {
          this.categoryList = res;
          
       }
-      
     })
   }
-
-  
-
  }
