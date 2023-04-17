@@ -26,6 +26,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { GenericButtonComponent } from './shared/generic-button/generic-button.component';
 import { OrderSumaryComponent } from './components/order-sumary/order-sumary.component';
 import { ProductBannerComponent } from './components/product-banner/product-banner.component';
+import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 registerLocaleData(ptBr);
 
@@ -49,6 +50,7 @@ registerLocaleData(ptBr);
     GenericButtonComponent,
     OrderSumaryComponent,
     ProductBannerComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

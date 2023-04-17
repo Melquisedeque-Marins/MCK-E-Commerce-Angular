@@ -1,0 +1,18 @@
+.container__empty-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-cart__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.empty-cart__content h1,p,button {
+    margin-bottom: 20px;
+}

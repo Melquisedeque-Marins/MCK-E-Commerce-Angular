@@ -1,6 +1,12 @@
 <div class="container__cart">
     <app-section-title title="meu carrinho"></app-section-title>
-    <div class="cart__content">
+    <app-not-found 
+    [visible]="!cart || !cart.items.length"
+    messageTitle="Carrinho vazio!"
+    messageText="Você ainda não possui itens no seu carrinho."
+    buttonText="Ver produtos"
+    ></app-not-found>
+    <div class="cart__content" *ngIf="cart && cart.items.length">
         <div class="content__left">
             <div  *ngFor="let item of cart.items">
                 <app-item-cart [cartItem]="item"></app-item-cart>
@@ -10,10 +16,4 @@
             <app-order-sumary></app-order-sumary>
         </div>
     </div>
-    <app-banner 
-    bannerTitle = 'Get 5% Cash Back' 
-    bannerText="on Shopcart.com"
-    bannerImg='https://cdn-icons-png.flaticon.com/512/3176/3176101.png'
-    textColor="#FFF">
-    </app-banner>
 </div>

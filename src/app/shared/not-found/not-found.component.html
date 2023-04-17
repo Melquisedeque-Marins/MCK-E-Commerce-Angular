@@ -1,0 +1,11 @@
+<div class="empty-cart__content" *ngIf="visible">
+    <h1>{{ messageTitle }}</h1>
+    <p>{{ messageText}}</p>
+    <a [routerLink]="resetLinkRoute"> 
+        <app-generic-button
+        buttonText={{buttonText}}
+        padding="10px 20px"
+        ></app-generic-button>
+    </a>
+</div>
+

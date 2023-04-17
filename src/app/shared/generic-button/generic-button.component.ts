@@ -11,6 +11,8 @@ export class GenericButtonComponent implements OnInit {
   @Input() buttonText:string = '';
   @Input() fontSize:string = '';
   @Input() width:string = '';
+  @Input() padding:string = '15px 30px';
+
 
   constructor() { }
 

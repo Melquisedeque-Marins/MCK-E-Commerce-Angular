@@ -1,3 +1,10 @@
 <div class="container__button">
-    <button [ngStyle]="{'background':buttonColor, 'width':width, 'border': buttonColor, 'button:hover':buttonHoverColor, 'font-size': fontSize}"> {{ buttonText }} </button>
+    <button [ngStyle]="{'background':buttonColor,
+                        'width':width,
+                        'border': buttonColor,
+                        'button:hover':buttonHoverColor, 
+                        'fontSize': fontSize,
+                        'padding': padding}">
+                         {{ buttonText }}
+     </button>
 </div>
