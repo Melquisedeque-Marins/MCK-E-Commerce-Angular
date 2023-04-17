@@ -6,14 +6,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-  @Input() background:string = '';
+  @Input() background:string = '#CCC';
   @Input() buttonColor:string = '';
-  @Input() buttonHoverColor:string = '';
-  @Input() direction:string = '';
+  @Input() direction:string = 'row';
   @Input() bannerImg:string = '';
   @Input() bannerTitle:string = '';
   @Input() bannerText:string = '';
   @Input() textColor:string = '';
+  @Input() buttonText:string = 'Saiba mais';
 
   constructor() { }
 

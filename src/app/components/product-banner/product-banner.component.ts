@@ -10,13 +10,13 @@ export class ProductBannerComponent implements OnInit {
   @Input() product!: Product ;
   @Input() background:string = '';
   @Input() buttonColor:string = '';
-  @Input() buttonHoverColor:string = '';
-  @Input() direction:string = '';
+  @Input() direction:string = 'row';
   @Input() bannerImg:string = '';
   @Input() bannerTitle:string = '';
   @Input() bannerText:string = '';
-  @Input() buttonText:string = '';
+  @Input() buttonText:string = 'Saiba mais';
   @Input() textColor:string = '';
+
   constructor() { }
 
   ngOnInit(): void {

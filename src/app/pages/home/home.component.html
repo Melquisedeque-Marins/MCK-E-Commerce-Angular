@@ -1,14 +1,9 @@
 <div class="container__home">
     <div class="home__content">
         <div class="content__banner">
-            <app-banner 
-            bannerTitle = 'Nova LG Smart TV 8k' 
-            bannerText="Desfrute dos melhores filmes e series com uma smartTV LG."
-            bannerImg ='https://cdn.shopify.com/s/files/1/2700/1230/products/SmartTVLG32LQ630B6LED32HD-11_grande.png?v=1649325086' direction="row-reverse" background="#CCC" buttonColor=""
-            buttonHoverColor='#CCC'
-            direction="row-reverse"
-            >
-            </app-banner>
+            <app-product-banner [product]="product">
+
+            </app-product-banner>
         </div>
         <app-section-title title="Produtos para você!"></app-section-title>
         <div class="content__product-card">
@@ -20,8 +15,10 @@
             <app-banner 
             bannerTitle = 'três maçãs verdes' 
             bannerText="Essa maçã é muito boa"
-            bannerImg ='https://www.spar.pt/images/thumbs/0005093_maca-golden-7075-ii-kg-emb-500gr-aprox_550.png' direction="row-reverse" background="#CCC" buttonColor=""
-            buttonText='#CCC'
+            bannerImg ='https://www.spar.pt/images/thumbs/0005093_maca-golden-7075-ii-kg-emb-500gr-aprox_550.png' 
+            direction="row-reverse" 
+            background="#CCC" 
+            buttonColor=""
             direction="row-reverse"
             >
             </app-banner>
@@ -44,7 +41,7 @@
         bannerTitle = 'Get 5% Cash Back' 
         bannerText="on Shopcart.com"
         bannerImg='https://cdn-icons-png.flaticon.com/512/3176/3176101.png'
-        textColor="#FFF">
+        >
         </app-banner>
     </div>
 </div>

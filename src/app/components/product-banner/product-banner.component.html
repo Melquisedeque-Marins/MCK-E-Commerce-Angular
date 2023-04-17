@@ -1,9 +1,26 @@
 <div [ngStyle]="{'background':background}"  class="container__banner">
     <div [ngStyle]="{'flex-direction':direction}" class="banner__content">
         <div class="banner__content-left">
-            <h1 [ngStyle]="{'color':textColor}"> {{product.name}} </h1>
-            <p [ngStyle]="{'color':textColor}"> {{ product.description }}</p>
-            <a routerLink="/products/{{ product.id }}"><button [ngStyle]="{'background':buttonColor, 'border': buttonColor, 'button:hover':buttonHoverColor}"> {{ buttonText }} </button></a>
+            <h1 [ngStyle]="{'color':textColor}"> {{ product.description }}</h1>
+            <div class="content-left__price">
+                <div class="price-original">
+                    <div class="value">
+                        <span>De:</span><span> {{ product.price | currency:'EUR' }}</span>
+                    </div>
+                    <div class="discount-tag">
+                        <span> -{{ product.discountValue }}%</span>
+                    </div>
+                </div>
+                <div class="price-promo">
+                    <span >Por:</span><span>  {{ product.promotionalPrice | currency:'EUR' }}</span>
+                </div>
+            </div>
+
+            <a routerLink="/products/{{ product.id }}">
+                <button [ngStyle]="{'background':buttonColor, 'border': buttonColor}"> 
+                    {{ buttonText }} 
+                </button>
+            </a>
         </div>
         <div class="banner__content-right">
             <img [src]="product.coverImg" alt="">

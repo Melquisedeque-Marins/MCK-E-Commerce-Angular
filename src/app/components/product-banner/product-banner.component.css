@@ -1,15 +1,16 @@
 .container__banner {
     display: flex;
     justify-content: center;
-    background-color: rgba(40, 40, 205, 0.733);
+    background-color: #0A164A;
     margin-bottom: 50px;
+    padding: 20px 100px;
+
 }
 
 .banner__content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 60px 120px;
     width: 90%;
     max-height: 320px;
 }
@@ -18,12 +19,16 @@
 .banner__content-left {
     display: flex;
     flex-direction: column;
-    color: #333;
+    color: #FFF;
+    width: 60%;
+    animation-duration: 1s;
+    animation-name: leftSlidein;
+    overflow: hidden;
 }
 
 .banner__content-left h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 10px;
 }
 
 .banner__content-left h1::first-letter {
@@ -36,11 +41,45 @@
     margin-bottom: 30px;
 }
 
+.content-left__price {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.price-original {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #CCC;
+    margin-bottom: 5px;
+}
+
+.price-original .value {
+    text-decoration: line-through;
+}
+
+.price-original .discount-tag {
+    margin-left: 10px;
+    background-color: green;
+    color: #FFF;
+    padding: 5px 5px;
+    font-size: 18px;
+}
+
+.price-promo {
+    font-size: 26px;
+    font-weight: 700;    
+}
+
+
+
+
 .banner__content-left button{
     font-family: Eina01, sans-serif;
     font-size: 18px;
     font-weight: 600;
-    text-transform: capitalize;
     color: #FFF;
     background-color: #003D29;
     border-radius: 30px;
@@ -57,9 +96,43 @@
 }
 
 .banner__content-right {
+    display: flex;
     max-height: 300px;
+    width: 30%;
+    overflow: hidden;
 }
 
 .banner__content-right img {
-    max-height: 250px;
+    width: 300px;
+    animation-duration: 1.2s;
+    animation-name: slidein;
+    cursor: pointer;
 }
+
+.banner__content-right img:hover {
+    transform: scale(1.15);
+    transition: 1s;
+}
+
+
+  
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes leftSlidein {
+    from {
+        margin-left: -1000%;
+        width: 100%
+    }
+
+    to {
+        margin-left:0%;
+    }
+  }

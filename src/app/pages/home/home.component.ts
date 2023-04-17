@@ -39,7 +39,8 @@ export class HomeComponent implements OnInit {
         this.productService.getAllProducts().subscribe(
           {
             next: (res) => {
-              this.productList = res.content
+              this.productList = res.content;
+              
             },
             error: (err) => console.log(err)
         })
@@ -51,8 +52,9 @@ export class HomeComponent implements OnInit {
     this.productService.getAllPromoProducts(0).subscribe(
       {
         next: (res) => {
+          const numero = Math.floor(Math.random() * res.content.length);
           this.promoProductsList = res.content;
-          console.log(res)
+          this.product = res.content[numero]
         },
         error: (err) => console.log(err)
     })
@@ -65,5 +67,7 @@ export class HomeComponent implements OnInit {
       
     })
   }
+
+  
 
  }
