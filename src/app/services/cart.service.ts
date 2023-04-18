@@ -14,12 +14,35 @@ export class CartService {
   constructor() { }
 
   addToCart(product:Product): void {
+    let cartItem = this.cart.items.find(item => item.product.id === product.id);
+     if (cartItem)
+      return;
+    
     this.cart.items.push(new CartItem(product));
     this.setCarToLocalStorage();
   }
 
-  removeToCart(itemId:number): void {
+  removeFromCart(itemId:number): void {
     this.cart.items = this.cart.items.filter(p => p.product.id != itemId);
+    this.setCarToLocalStorage();
+  }
+
+  plusOneItem(productId:number) {
+    let cartItem = this.cart.items.find(item => item.product.id === productId);
+    if(!cartItem) return;
+    let qty = cartItem.quantity;
+    cartItem.quantity = qty + 1;
+    cartItem.price = cartItem.quantity * cartItem.product.price;
+    this.setCarToLocalStorage();
+  }
+
+  minusOneItem(productId:number) {
+    let cartItem = this.cart.items.find(item => item.product.id === productId);
+    if(!cartItem) return;
+    let qty = cartItem.quantity;
+    if(qty < 2) return;
+    cartItem.quantity = qty - 1;
+    cartItem.price = cartItem.quantity * cartItem.product.price;
     this.setCarToLocalStorage();
   }
 

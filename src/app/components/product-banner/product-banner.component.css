@@ -3,7 +3,7 @@
     justify-content: center;
     background-color: #0A164A;
     margin-bottom: 50px;
-    padding: 10px 100px;
+    padding: 10px 50px;
 
 }
 
@@ -27,7 +27,7 @@
 }
 
 .banner__content-left h1 {
-    font-size: 34px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -97,7 +97,6 @@
     display: flex;
     max-height: 300px;
     width: 30%;
-    overflow: hidden;
 }
 
 .banner__content-right img {

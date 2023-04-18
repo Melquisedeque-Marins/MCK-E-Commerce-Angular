@@ -18,7 +18,15 @@ export class ItemCartComponent implements OnInit {
   }
 
   removeItemFromCart() {
-    this.cartService.removeToCart(this.cartItem.product.id)
+    this.cartService.removeFromCart(this.cartItem.product.id)
+  }
+
+  plusOneItem(productId:number) {
+    this.cartService.plusOneItem(productId);
+  }
+
+  minusOneItem(productId:number) {
+    this.cartService.minusOneItem(productId);
   }
 
 }

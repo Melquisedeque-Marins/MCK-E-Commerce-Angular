@@ -8,7 +8,7 @@
         </div>
         <div class="content__add-cart">
             <div class="add-cart__button">
-                <button class="btn btn-left">-</button><label class="label">1</label><button class="btn btn-right">+</button>
+                <button (click)="minusOneItem(cartItem.product.id)" class="btn btn-left">-</button><label class="label">{{ cartItem.quantity }}</label><button (click)="plusOneItem(cartItem.product.id)" class="btn btn-right">+</button>
             </div>
             <span (click)="removeItemFromCart()">remover</span>
         </div>

@@ -7,7 +7,7 @@ import { Product } from 'src/app/Product';
   styleUrls: ['./product-banner.component.css']
 })
 export class ProductBannerComponent implements OnInit {
-  @Input() product!: Product ;
+  @Input() product?: Product ;
   @Input() background:string = '';
   @Input() buttonColor:string = '';
   @Input() direction:string = 'row';
