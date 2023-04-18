@@ -11,39 +11,37 @@ import { ReviewService } from 'src/app/services/review.service';
   styleUrls: ['./product-details.component.css']
 })
 export class ProductDetailsComponent implements OnInit {
-  productDetail!:Product;
+  product!:Product;
   promoProductsList: Product[] = [];
   relatedProductsList: Product[] = [];
   pathVariable!:number
   reviews:Review[] = [];
-  
 
   constructor( private productService: ProductService, 
     private reviewService: ReviewService, 
     private route: ActivatedRoute,
     private router:Router) { 
-    this.route.params.subscribe(
-      res => this.pathVariable = res['id']
-    )
+
+    route.params.subscribe( params => {
+      if (params['id']) {
+        this.productService.getProduct(params['id']).subscribe( 
+          {
+            next: (res) => {
+              this.product = res
+            },
+            error: (err) => console.log(err)
+        });
+      }
+    })
   }
-  
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.productService.getProduct(this.pathVariable).subscribe( 
-      {
-        next: (res) => {
-          this.productDetail = res
-        },
-        error: (err) => console.log(err)
-    });
-    this.getReviews();
-    
     this.productService.getAllRelatedProducts(1).subscribe(
       {
         next: (res) => {
           this.relatedProductsList = res.content;
-          console.log(this.productDetail.categories[0].id);
+          
         },
         error: (err) => console.log(err)
     })
@@ -57,16 +55,6 @@ export class ProductDetailsComponent implements OnInit {
     })
   }
 
-  getReviews() {
-    this.reviewService.getReviewsByProduct(this.pathVariable).subscribe(
-      {
-        next: (res) => {
-          this.reviews = res
-        },
-        error: (err) => console.log(err)
-      }
-    )
-    
-  }
+ 
 
 }

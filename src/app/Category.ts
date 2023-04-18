@@ -1,5 +1,5 @@
-export interface Category {
-    id: number;
-    name: string;
-    categoryImg: string;
+export class Category {
+    id!: number;
+    name!: string;
+    categoryImg!: string;
 }

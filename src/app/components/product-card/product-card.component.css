@@ -94,12 +94,12 @@
     flex-direction: column;
 }
 
+
 .price-original span {
     color: #5A5D5A;
     font-size: 12px;
     text-decoration: line-through;
 }
-
 
 .content__details-info p {
     font-size: 14px;

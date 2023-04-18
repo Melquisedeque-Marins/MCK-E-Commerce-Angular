@@ -9,7 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./product-card-details.component.css']
 })
 export class ProductCardDetailsComponent implements OnInit {
-  @Input() product!:Product;
+  @Input() product!:Product | any;
 
   constructor( private cartService:CartService,
     private router:Router

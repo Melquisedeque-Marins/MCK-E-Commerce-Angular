@@ -1,11 +1,21 @@
 <div class="container__home">
     <div class="home__content">
         <div class="content__banner">
+            <app-banner 
+            bannerTitle = 'até 40% de desconto em movéis' 
+            bannerText="confira na categoria movéis"
+            bannerImg ='https://impactomoveis.com/wp-content/uploads/2022/09/banner-1.png' 
+            background="#CCC" 
+            direction="row-reverse"
+            >
+            </app-banner>
+        </div>
+      <!-- <div class="content__banner">
             <app-product-banner 
             [product]="product"  
             buttonText="Ver oferta">
             </app-product-banner>
-        </div>
+        </div> --> 
         <app-section-title title="Produtos para você!"></app-section-title>
         <div class="content__product-card">
             <div *ngFor="let item of productList">

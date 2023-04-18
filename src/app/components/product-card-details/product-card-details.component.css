@@ -93,7 +93,7 @@
 }
 
 .content__details-reviews {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .star {
@@ -107,18 +107,28 @@
     margin-left: 5px;
 }
 
-.details-title__price {
+.details-title__price  {
     display: flex;
-    align-items: center;
-    font-size: 22px;
+    flex-direction: column;
+    font-size: 26px;
     font-weight: 700;
     color: #231f1e;
     margin-bottom: 20px;
 }
 
-.price__cifrao {
-    font-size: 26px;
-    margin-right: 5px;
+
+.price-if-promo {
+    display: none;
+}
+
+.promo-active {
+    display: inline-block;
+}
+
+.price-original span {
+    color: #5A5D5A;
+    font-size: 16px;
+    text-decoration: line-through;
 }
 
 .content__details-add-cart {

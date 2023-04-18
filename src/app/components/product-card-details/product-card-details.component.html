@@ -4,12 +4,12 @@
             <div class="left-content__main-photo">
                <div class="main-photo__background">
                     <span class="background-favourite-icon">❤</span> 
-                    <img [src]="product.coverImg" [alt]="product.name">
+                    <img [src]="product?.coverImg" [alt]="product?.name">
                </div> 
             </div>
             <div class="left-content__other-photos">
                 <div class="other-photos__backgorund">
-                    <img [src]="product.imgUrl" alt="">
+                    <img [src]="product?.imgUrl" alt="">
                 </div>
             </div>
         </div>
@@ -17,26 +17,30 @@
             <div class="content__details">
                 <div class="content__details-info">
                     <div class="content__details-title">
-                        <h1>{{ product.name}}</h1>
+                        <h1>{{ product?.description}}</h1>
                     </div>
-                    <p> {{ product.description }}</p>
                 </div>
                 <div class="content__details-reviews">
                     <div class="star">
                         <star-rating 
-                        [value]="product.rate"
+                        [value]="product?.rate"
                         [totalstars]="5"
                         checkedcolor="#F2C832"
                         uncheckedcolor="#CCC"
                         size="18px"
                         [readonly]="true">
                         </star-rating>
-                        <span> ({{ product.qtyReviews }}) {{product.qtyReviews!=1?'avaliações':'avaliação'}}</span>
+                        <span> ({{ product?.qtyReviews }}) {{product?.qtyReviews!=1?'avaliações':'avaliação'}}</span>
                     </div>
                     
                 </div>
                 <div class="details-title__price">
-                    <span> {{ product.price | currency: 'EUR'}}</span> 
+                    <div [ngClass]="{'price-original':product.isInSale}">
+                       <span [ngClass]="{'promo-active':product.isInSale}" class="price-if-promo">De: </span> <span> {{ product.price | currency: 'EUR'}}</span>
+                    </div> 
+                    <div class="price-promo" *ngIf="product.isInSale">
+                        <span > Por: {{ product.promotionalPrice | currency: 'EUR'}}</span>
+                    </div>
                 </div>
                 <div class="content__details-add-cart">
                     <div class="content__counter-items">

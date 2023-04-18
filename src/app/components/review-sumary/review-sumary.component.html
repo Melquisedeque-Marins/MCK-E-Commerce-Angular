@@ -4,9 +4,9 @@
     </div>
     <div class="review-sumary-info">
         <div class="star-rating">
-            <span>{{product.rate}}</span>
+            <span>{{product?.rate}}</span>
             <star-rating
-            [value]="product.rate"
+            [value]="product?.rate"
             [totalstars]="5"
             checkedcolor="#F2C832"
             uncheckedcolor="#CCC"
@@ -15,6 +15,6 @@
             </star-rating>
         </div>
         <hr>
-        <p>Este produto teve {{ product.qtyReviews}} avaliações</p>
+        <p>Este produto teve {{ product?.qtyReviews}} avaliações</p>
     </div>
 </div>

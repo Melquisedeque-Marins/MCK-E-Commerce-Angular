@@ -7,7 +7,7 @@ import { Product } from 'src/app/Product';
   styleUrls: ['./review-sumary.component.css']
 })
 export class ReviewSumaryComponent implements OnInit {
-@Input() product!:Product;
+@Input() product?:Product | any;
 
   constructor() { }
 
