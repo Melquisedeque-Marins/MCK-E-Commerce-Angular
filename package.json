@@ -20,8 +20,8 @@
     "@angular/platform-browser-dynamic": "^14.1.0",
     "@angular/router": "^14.1.0",
     "@popperjs/core": "^2.10.2",
+    "angular-oauth2-oidc": "^14.0.1",
     "bootstrap": "^5.2.3",
-    "ng-starrating": "^1.0.20",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

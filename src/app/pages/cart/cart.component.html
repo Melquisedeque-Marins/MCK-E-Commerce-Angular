@@ -1,11 +1,13 @@
 <div class="container__cart">
     <app-section-title title="meu carrinho"></app-section-title>
-    <app-not-found 
-    [visible]="!cart || !cart.items.length"
-    messageTitle="Carrinho vazio!"
-    messageText="Você ainda não possui itens no seu carrinho."
-    buttonText="Ver produtos"
-    ></app-not-found>
+    <div class="empty-cart">
+        <app-not-found
+        [visible]="!cart || !cart.items.length"
+        messageTitle="Carrinho vazio!"
+        messageText="Você ainda não possui itens no seu carrinho."
+        buttonText="Ver produtos"
+        ></app-not-found>
+    </div>
     <div class="cart__content" *ngIf="cart && cart.items.length">
         <div class="content__left">
             <div  *ngFor="let item of cart.items">
@@ -16,8 +18,8 @@
             <app-order-sumary></app-order-sumary>
             <app-generic-button (click)="clearCart()"
             buttonText="esvaziar o carrinho"
-            padding="5px 10px"
-            buttonColor="red">
+            padding="5px 5px"
+            fontSize="14px">
         </app-generic-button>
         </div>
     </div>

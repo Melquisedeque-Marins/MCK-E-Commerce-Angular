@@ -8,8 +8,8 @@ import { CartItem } from '../CartItem';
   providedIn: 'root'
 })
 export class CartService {
-  private cart: Cart = new Cart();
-  private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.getCartFromLocalStorage());
+  private cart: Cart = this.getCartFromLocalStorage();
+  private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
 
   constructor() { }
 
@@ -23,7 +23,7 @@ export class CartService {
   }
 
   removeFromCart(itemId:number): void {
-    this.cart.items = this.cart.items.filter(p => p.product.id != itemId);
+    this.cart.items = this.cart.items.filter(item => item.product.id != itemId);
     this.setCarToLocalStorage();
   }
 

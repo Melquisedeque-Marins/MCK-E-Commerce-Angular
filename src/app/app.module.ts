@@ -1,7 +1,7 @@
 import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +15,6 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { ReviewCardComponent } from './components/review-card/review-card.component';
 import { ReviewSumaryComponent } from './components/review-sumary/review-sumary.component';
 
-import {RatingModule} from 'ng-starrating'
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { CategoriesBadgeComponent } from './components/categories-badge/categories-badge.component';
@@ -28,6 +27,7 @@ import { OrderSumaryComponent } from './components/order-sumary/order-sumary.com
 import { ProductBannerComponent } from './components/product-banner/product-banner.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
+import { OAuthModule } from 'angular-oauth2-oidc'
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -57,7 +57,13 @@ registerLocaleData(ptBr);
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RatingModule
+    FormsModule,
+    OAuthModule.forRoot({
+      resourceServer: {
+          allowedUrls: ['http://localhost:8080'],
+          sendAccessToken: true
+      }
+  })
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

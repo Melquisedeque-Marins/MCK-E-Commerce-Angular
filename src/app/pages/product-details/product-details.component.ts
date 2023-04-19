@@ -16,6 +16,7 @@ export class ProductDetailsComponent implements OnInit {
   relatedProductsList: Product[] = [];
   pathVariable!:number
   reviews:Review[] = [];
+  catId:number=0;
 
   constructor( private productService: ProductService, 
     private reviewService: ReviewService, 
@@ -28,6 +29,7 @@ export class ProductDetailsComponent implements OnInit {
           {
             next: (res) => {
               this.product = res
+              this.catId = res.categories[0].id;
             },
             error: (err) => console.log(err)
         });
@@ -37,16 +39,16 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-    this.productService.getAllRelatedProducts(1).subscribe(
+    this.productService.getAllRelatedProducts(this.catId).subscribe(
       {
         next: (res) => {
           this.relatedProductsList = res.content;
-          
+          console.log(this.catId)
         },
         error: (err) => console.log(err)
     })
 
-    this.productService.getAllPromoProducts(1).subscribe(
+    this.productService.getAllPromoProducts(this.catId).subscribe(
       {
         next: (res) => {
           this.promoProductsList = res.content;

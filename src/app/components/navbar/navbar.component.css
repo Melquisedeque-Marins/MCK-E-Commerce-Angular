@@ -11,6 +11,10 @@
     display: flex;
 }
 
+ul  {
+    margin: 0;
+}
+
 .navbar__menu li {
     list-style: none;
     margin-right: 50px;

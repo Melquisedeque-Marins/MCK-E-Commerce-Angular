@@ -2,14 +2,14 @@
     <div class="review__content">
         <h1>{{review.title}}</h1>
         <div class="star">
-            <star-rating 
+        <!--    <star-rating 
             [value]="review.rate"
             [totalstars]="5"
             checkedcolor="#F2C832"
             uncheckedcolor="#CCC"
             size="18px"
             [readonly]="true">
-            </star-rating>
+            </star-rating> -->
         </div>
         <p> {{ review.description }}</p>
         <span>{{ review.userName }} em {{ review.createdAt | date : 'dd/MM/yyyy HH:mm'}}</span> 
