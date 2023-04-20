@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { AuthConfig, NullValidationHandler, OAuthService } from 'angular-oauth2-oidc';
 import { Cart } from 'src/app/Cart';
 import { Category } from 'src/app/Category';
+import { AuthService } from 'src/app/services/auth.service';
 import { CartService } from 'src/app/services/cart.service';
 import { CategoryService } from 'src/app/services/category.service';
 
@@ -17,20 +17,25 @@ export class NavbarComponent implements OnInit {
   searchTerm:string = '';
   categoryList: Category[] = [];
   cart!:Cart;
+  isLogged: boolean = false;
 
   constructor(private formBuilder: FormBuilder,
       private categoryService: CategoryService,
       private router: Router,
       private activatedRoute: ActivatedRoute,
       private cartService: CartService,
-      private oauthService:OAuthService) {
-        this.configure();
+      private authService:AuthService
+      ) {
+        
     activatedRoute.params.subscribe((params) => {
       if(params['searchTerm'])
       this.searchTerm = params['searchTerm'];
     })
       this.cartService.getCartObservable().subscribe((cart) => {
         this.cart = cart;
+      })
+      this.authService.getIsLoggedObsarvable().subscribe((isLogged) => {
+        this.isLogged = isLogged;
       })
    }
 
@@ -50,30 +55,13 @@ export class NavbarComponent implements OnInit {
     this.router.navigate([`/busca/${searchTerm}`])
   }
 
-  authConfig: AuthConfig = {
-    issuer: 'http://localhost:8088/realms/mck-e-commerce',
-    redirectUri: window.location.origin,
-    clientId: 'mck-e-commerce-frontend',
-    responseType: 'code',
-    scope: 'openid profile email offline_access',
-    showDebugInformation: true,
-  };
-
-  configure(): void {
-    this.oauthService.configure(this.authConfig);
-    this.oauthService.tokenValidationHandler = new NullValidationHandler();
-    this.oauthService.setupAutomaticSilentRefresh();
-    this.oauthService.loadDiscoveryDocument().then(() => this.oauthService.tryLogin());
+  login() {
+    this.authService.login();
+    console.log(this.isLogged)
   }
-
-  login(): void {
-    this.oauthService.initImplicitFlowInternal();
+  logout() {
+    this.authService.logout();
   }
-
-  logout(): void {
-    this.oauthService.logOut();
-  }
-
 
 
 }

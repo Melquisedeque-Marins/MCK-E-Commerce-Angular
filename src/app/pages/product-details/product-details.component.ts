@@ -43,7 +43,6 @@ export class ProductDetailsComponent implements OnInit {
       {
         next: (res) => {
           this.relatedProductsList = res.content;
-          console.log(this.catId)
         },
         error: (err) => console.log(err)
     })
