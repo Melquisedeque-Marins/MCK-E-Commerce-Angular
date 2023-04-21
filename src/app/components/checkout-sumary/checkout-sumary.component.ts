@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Order } from 'src/app/Order';
 
 @Component({
   selector: 'app-checkout-sumary',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout-sumary.component.css']
 })
 export class CheckoutSumaryComponent implements OnInit {
+  @Input() order!: Order;
+  
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit(): void {
+   
   }
 
 }

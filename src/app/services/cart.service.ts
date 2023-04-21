@@ -55,6 +55,10 @@ export class CartService {
     return this.cartSubject.asObservable();
   }
 
+  getCart() {
+    return this.cartSubject.value;
+  }
+
   private setCarToLocalStorage():void {
     this.cart.totalCount = this.cart.items
     .reduce((prevSum, currentItem) => prevSum + currentItem.quantity, 0);
