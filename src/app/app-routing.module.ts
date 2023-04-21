@@ -9,6 +9,7 @@ const routes: Routes = [
   {path: 'busca/:searchTerm', component: HomeComponent},
   {path: 'products/:id', component: ProductDetailsComponent},
   {path: 'cart', component: CartComponent },
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({

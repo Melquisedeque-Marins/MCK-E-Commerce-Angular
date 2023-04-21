@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Cart } from 'src/app/Cart';
 import { Category } from 'src/app/Category';
 import { AuthService } from 'src/app/services/auth.service';
@@ -17,7 +18,9 @@ export class NavbarComponent implements OnInit {
   searchTerm:string = '';
   categoryList: Category[] = [];
   cart!:Cart;
-  isLogged: boolean = false;
+  isLogged!: boolean;
+  userName!: string;
+ 
 
   constructor(private formBuilder: FormBuilder,
       private categoryService: CategoryService,
@@ -36,6 +39,10 @@ export class NavbarComponent implements OnInit {
       })
       this.authService.getIsLoggedObsarvable().subscribe((isLogged) => {
         this.isLogged = isLogged;
+      })
+
+      this.authService.getUserNameObsarvable().subscribe((userName) => {
+        this.userName = userName;
       })
    }
 
@@ -57,12 +64,12 @@ export class NavbarComponent implements OnInit {
 
   login() {
     this.authService.login();
-    console.log(this.isLogged)
+    
+    
   }
   logout() {
     this.authService.logout();
   }
-
 
 }
 

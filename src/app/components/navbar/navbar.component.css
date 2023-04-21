@@ -79,6 +79,10 @@ ul  {
     color: #231F1E;
 }
 
+.login-user-name {
+    margin-right: 10px;
+}
+
 .navbar__cart {
     display: flex;
     justify-content: center;

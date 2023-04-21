@@ -27,7 +27,9 @@ import { OrderSumaryComponent } from './components/order-sumary/order-sumary.com
 import { ProductBannerComponent } from './components/product-banner/product-banner.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
-import { OAuthModule } from 'angular-oauth2-oidc'
+import { OAuthModule } from 'angular-oauth2-oidc';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { CheckoutSumaryComponent } from './components/checkout-sumary/checkout-sumary.component'
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -51,6 +53,8 @@ registerLocaleData(ptBr);
     OrderSumaryComponent,
     ProductBannerComponent,
     NotFoundComponent,
+    CheckoutComponent,
+    CheckoutSumaryComponent,
   ],
   imports: [
     BrowserModule,
