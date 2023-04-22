@@ -64,9 +64,8 @@ export class NavbarComponent implements OnInit {
 
   login() {
     this.authService.login();
-    
-    
   }
+  
   logout() {
     this.authService.logout();
   }

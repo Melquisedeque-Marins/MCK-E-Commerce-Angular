@@ -17,8 +17,8 @@
         <div class="navbar__login">
             <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63eb3dec9d6ee83660ebe1de_user.png" loading="lazy" alt="">
             <span *ngIf="isLogged" class="login-user-name">{{ userName }}</span>
-            <a href="#" *ngIf="!isLogged" (click)="login()">Login</a>
-            <a href="#" *ngIf="isLogged" (click)="logout()">Logout</a>
+            <a *ngIf="!isLogged" (click)="login()">Login</a>
+            <a *ngIf="isLogged" (click)="logout()">Logout</a>
         </div>
         <div class="navbar__cart">
             <a routerLink="/cart">

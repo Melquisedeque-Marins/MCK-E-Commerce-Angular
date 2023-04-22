@@ -1,5 +1,5 @@
 .container__checkout-sumary {
-
+    margin-top: 50px;
 }
 
 table {
@@ -19,4 +19,54 @@ img {
     text-decoration: none;
     color: black;
     width: 500px;
+}
+
+
+.content__order-item {
+    display: grid;
+    grid-template-columns: 120px minmax(100px, 1fr) 80px repeat(2, 120px);
+    column-gap: 10px;
+    row-gap: 0px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 75%;
+    min-height: 100px;
+}
+
+.title-column {
+    min-height: 25px;
+    font-weight: 700;
+}
+
+.title-column .tag {
+    display: flex;
+    justify-content: center;
+    color: #231f1e;
+    border-bottom: #231f1e ;
+}
+
+.order-item-img {
+    display: flex;
+}
+
+.order-item-img img {
+    width: 100px;
+}
+
+.order-item-name {
+    display: flex;
+    text-align: left;
+    font-weight: 700;
+    color: #5A5D5A;
+
+    font-size: 16px;
+}
+
+.order-item-base {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    color: #5A5D5A;
+
 }

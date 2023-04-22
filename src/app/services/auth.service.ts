@@ -47,6 +47,7 @@ export class AuthService {
   }
 
   logout(): void {
+    this.oauthService.revokeTokenAndLogout(true);
     this.oauthService.logOut();
     this.isLoggedSubject.next(this.getIsLogged());
     this.userNameSubject.next('');

@@ -1,6 +1,34 @@
 <div class="container__checkout-sumary">
     <div class="checkout-sumary__content">
         <app-section-title title="Resumo do pedido"></app-section-title>
+        <div class="content__order-item title-column">
+            <div class="tag">produto</div>
+            <div class="tag">name</div>
+            <div class="tag">qtd.</div>
+            <div class="tag">preço unit.</div>
+            <div class="tag">total do item</div>
+        </div>
+        <br>
+        <div class="content__order-item" *ngFor="let item of order.items">
+            <div class="order-item-img">
+                <img [src]="item.product.imgUrl" alt="">
+            </div>
+            <div class="order-item-name">
+                <p>{{ item.product.description}}</p>
+            </div>
+            <div class="order-item-base">
+                <span>{{ item.quantity }}</span>
+            </div>
+            <div class="order-item-base">
+                <span>{{ item.product.price | currency: 'EUR'}}</span>
+            </div>
+            <div class="order-item-base">
+                <span>{{ item.price | currency: 'EUR'}}</span>
+            </div>
+        </div>
+        <hr>
+        
+        <app-section-title title="Resumo do pedido"></app-section-title>
         <table>
             <tr>
                 <td>Produto</td>
