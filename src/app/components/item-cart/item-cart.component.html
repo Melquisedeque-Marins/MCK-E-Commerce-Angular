@@ -1,7 +1,7 @@
 <div class="container__item-cart">
     <div class="item-cart__content">
         <div class="content__product-card">
-            <img [src]="cartItem.product.imgUrl" alt="">
+            <a [routerLink]="['/products', cartItem.product.id]"><img [src]="cartItem.product.imgUrl" alt=""></a>
         </div>
         <div class="product-card__text">
             <p>{{ cartItem.product.description}}</p>

@@ -26,36 +26,4 @@
                 <span>{{ item.price | currency: 'EUR'}}</span>
             </div>
         </div>
-        <hr>
-        
-        <app-section-title title="Resumo do pedido"></app-section-title>
-        <table>
-            <tr>
-                <td>Produto</td>
-                <td>quantidade</td>
-                <td>preço unitário</td>
-                <td>total do item</td>
-            </tr>
-            <tr *ngFor="let item of order.items">
-                <td>
-                    <a class="content__product" routerLink="/products/{{ item.product.id }}">
-                        <img [src]="item.product.coverImg" alt="" />
-                        <p>{{ item.product.description}}</p>
-                    </a>
-                </td>
-                <td>
-                    {{ item.quantity}}
-                </td>
-                <td>
-                    {{ item.product.price | currency: 'EUR'}}
-                </td>
-                <td>
-                    {{ item.price | currency: 'EUR'}}
-                </td>
-            </tr>
-        </table>
-        <h1>{{ order.totalPrice | currency: 'EUR'}}</h1>
-    </div>
-
-
 </div>
