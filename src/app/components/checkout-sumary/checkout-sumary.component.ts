@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Order } from 'src/app/Order';
+import { Order } from 'src/app/models/Order';
 
 @Component({
   selector: 'app-checkout-sumary',

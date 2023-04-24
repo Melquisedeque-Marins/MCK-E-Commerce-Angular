@@ -1,12 +1,12 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Category } from 'src/app/Category';
+import { Category } from 'src/app/models/Category';
 
-import { Product } from 'src/app/Product';
+import { Product } from 'src/app/models/Product';
 import { CategoryService } from 'src/app/services/category.service';
 
 import { ProductService } from 'src/app/services/product.service';
-import { SpringPage } from 'src/app/SpringPage';
+import { SpringPage } from 'src/app/models/SpringPage';
 
 @Component({
   selector: 'app-home',

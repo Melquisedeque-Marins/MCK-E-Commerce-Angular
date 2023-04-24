@@ -3,8 +3,8 @@ import { HttpClient, HttpHeaders} from '@angular/common/http'
 
 import { environment} from '../../environments/environment'
 import { Observable } from 'rxjs';
-import { Product } from '../Product';
-import { SpringPage } from '../SpringPage';
+import { Product } from '../models/Product';
+import { SpringPage } from '../models/SpringPage';
 
 @Injectable({
   providedIn: 'root'

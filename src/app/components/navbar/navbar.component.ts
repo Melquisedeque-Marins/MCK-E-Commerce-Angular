@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { Cart } from 'src/app/Cart';
-import { Category } from 'src/app/Category';
+import { Cart } from 'src/app/models/Cart';
+import { Category } from 'src/app/models/Category';
 import { AuthService } from 'src/app/services/auth.service';
 import { CartService } from 'src/app/services/cart.service';
 import { CategoryService } from 'src/app/services/category.service';
