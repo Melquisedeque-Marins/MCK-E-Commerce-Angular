@@ -1,6 +1,6 @@
 export interface Address {
     codigoPostal: string;
-    district: string;
+    distrito: string;
     municipio: string;
     localidade: string;
     centro: string;

@@ -4,9 +4,18 @@
             <img src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg" loading="lazy" alt="" >
         </a>
         <ul class="navbar__menu">
-            <li class="navbar__menu-item"><a href="">Categorias</a></li>
-            <li class="navbar__menu-item"><a href="">Novidades</a></li>
-            <li class="navbar__menu-item"><a href="">Promoções</a></li>
+            <li class="navbar__menu-item" > 
+                <a href="">Categorias</a>
+                <div class="menu-item-drop-menu">
+                    <a href="" *ngFor="let item of categoryList">{{item.name}}</a>
+                </div>
+            </li>
+            <li class="navbar__menu-item" > 
+                <a href="">Categorias</a>
+                <div class="menu-item-drop-menu">
+                    <a href="" *ngFor="let item of categoryList">{{item.name}}</a>
+                </div>
+            </li>
         </ul>
         <div class="navbar__search-box">
             <form [formGroup]="form">
@@ -29,8 +38,8 @@
             </div>
         </div>
     </nav>
-    <div class="content__category-badge">
+ <!--   <div class="content__category-badge">
         <app-categories-badge [categoryList]="categoryList"></app-categories-badge>
-    </div>
+    </div>-->
 </header>
 

@@ -7,7 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SectionTitleComponent implements OnInit {
   @Input() title: string = '';
-  @Input() fontSize: string = '28px'
+  @Input() width: string = '90%';
+  @Input() fontSize: string = '28px';
+
 
   constructor() { }
 
