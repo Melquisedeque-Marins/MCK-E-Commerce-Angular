@@ -5,10 +5,12 @@
     <div class="register-address__content">
         <div class="content__form">
             <form action="">
-                <div class="input-field">
+                <div class="search-field">
                     <label class="required" for="">código postal</label>
-                    <input type="text">
+                    <input type="search">
                 </div>
+            </form>
+            <form action="">
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">distrito</label>
@@ -31,25 +33,29 @@
                     <label class="required" for="">designação postal</label>
                     <input type="text">
                 </div>
-                <div class="input-field">
-                    <label class="required" for="">número</label>
-                    <input type="text">
-                </div>
-                <div class="input-field">
-                    <label class="optional" for="">complemento</label>
-                    <input type="text">
+                <div class="input-row">
+                    <div class="input-field">
+                        <label class="required" for="">número</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-field">
+                        <label class="optional" for="">complemento</label>
+                        <input type="text">
+                    </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">ponto de referência</label>
                     <input type="text">
                 </div>
-                <div class="input-field">
-                    <label class="required" for="">nome</label>
-                    <input type="text">
-                </div>
-                <div class="input-field">
-                    <label class="optional" for="">cpf</label>
-                    <input type="text">
+                <div class="input-row">
+                    <div class="input-field">
+                        <label class="required" for="">nome</label>
+                        <input type="text">
+                    </div>
+                    <div class="input-field">
+                        <label class="optional" for="">cpf</label>
+                        <input type="text">
+                    </div>
                 </div>
                 <button routerLink="/checkout" type="submit">salvar endereço para entrega</button>
             </form>

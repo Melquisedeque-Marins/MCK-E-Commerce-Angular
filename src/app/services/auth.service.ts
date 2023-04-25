@@ -21,7 +21,7 @@ export class AuthService {
   
   authConfig: AuthConfig = {
     issuer: 'http://localhost:8088/realms/mck-e-commerce',
-    redirectUri: window.location.origin ,
+    redirectUri: window.location.origin,
     clientId: 'mck-e-commerce-frontend',
     responseType: 'code',
     scope: 'openid profile email offline_access',

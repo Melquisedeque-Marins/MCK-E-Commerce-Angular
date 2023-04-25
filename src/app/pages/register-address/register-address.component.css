@@ -64,6 +64,16 @@ form input {
     margin-bottom: 10px;
 }
 
+.search-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.search-field input {
+    width: 50%;
+}
+
 .input-field {
     display: flex;
     flex-direction: column;
@@ -97,3 +107,4 @@ button:hover {
     background-color: #231F1E;
     transition: .5s;
 }
+
