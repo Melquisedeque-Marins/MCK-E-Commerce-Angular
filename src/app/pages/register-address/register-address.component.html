@@ -10,28 +10,43 @@
                     <input type="search">
                 </div>
             </form>
-            <form action="">
+            <form [formGroup]="registerAddressForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">distrito</label>
-                        <input type="text">
+                        <input name="district" id="district" formControlName="district" type="text">
+                        <div *ngIf="district.invalid && formDir.submitted">
+                            campo obrigatório
+                        </div>
                     </div>
                     <div class="input-field">
                         <label class="required" for="">município</label>
-                        <input type="text">
+                        <input name="municipio" id="municipio" formControlName="municipio" type="text">
+                        <div *ngIf="municipio.invalid && formDir.submitted">
+                            campo obrigatório
+                        </div>
                     </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">localidade</label>
                     <input type="text">
+                    <div *ngIf="locale.invalid && formDir.submitted">
+                        campo obrigatório
+                    </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">centro</label>
                     <input type="text">
+                    <div *ngIf="center.invalid && formDir.submitted">
+                        campo obrigatório
+                    </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">designação postal</label>
                     <input type="text">
+                    <div *ngIf="postalDesignation.invalid && formDir.submitted">
+                        campo obrigatório
+                    </div>
                 </div>
                 <div class="input-row">
                     <div class="input-field">
@@ -57,7 +72,7 @@
                         <input type="text">
                     </div>
                 </div>
-                <button routerLink="/checkout" type="submit">salvar endereço para entrega</button>
+                <button type="submit">salvar endereço para entrega</button>
             </form>
         </div>
     </div>

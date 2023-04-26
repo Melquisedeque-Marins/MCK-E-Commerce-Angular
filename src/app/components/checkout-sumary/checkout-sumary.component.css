@@ -2,17 +2,6 @@
     margin-top: 50px;
 }
 
-table {
-    width: 75%;
-    border: 1px solid #CCC;
-    align-items: center;
-    justify-content: center;
-}
-
-img {
-    height: 100px;
-}
-
 .content__product {
     display: flex;
     align-items: center;

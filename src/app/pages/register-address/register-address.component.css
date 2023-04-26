@@ -71,7 +71,7 @@ form input {
 }
 
 .search-field input {
-    width: 50%;
+    max-width: 300px;
 }
 
 .input-field {
@@ -84,7 +84,7 @@ form input {
 .input-row {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     column-gap: 10px;
 }
 
