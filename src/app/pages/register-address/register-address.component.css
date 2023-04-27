@@ -29,13 +29,23 @@ form {
 
 form label {
     color: #231f1e;
-    height: 30px;
+    height: 25px;
+}
+
+form .required {
+    font-size: 14px;
+    margin: 0;
 }
 
 form .required::before {
     content: "*";
     margin-right: 2px;
     color: red;
+}
+
+form .optional {
+    font-size: 14px;
+    margin: 0;
 }
 
 form .optional::after {
@@ -61,7 +71,7 @@ form input {
     height: 45px;
     padding: 5px;
     padding-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .search-field {
@@ -100,11 +110,25 @@ button {
     cursor: pointer;
     max-width: 400px ;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 button:hover {
     color: #FFF;
     background-color: #231F1E;
     transition: .5s;
+}
+
+.btn-disable {
+    opacity: .5;
+}
+
+.field-error {
+    color: red;
+    font-size: 13px;
+}
+
+.field-error p::before{
+    content: "*";
 }
 

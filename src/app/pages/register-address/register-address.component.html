@@ -4,72 +4,85 @@
     </div>
     <div class="register-address__content">
         <div class="content__form">
-            <form action="">
-                <div class="search-field">
+            <div class="search-field">
+                <form [formGroup]="searchCPForm"  (ngSubmit)="findAddress(cp.value)">
                     <label class="required" for="">código postal</label>
-                    <input type="search">
-                </div>
-            </form>
+                    <div class="search-box">
+                        <input #cp formControlName="postalCode" type="search">
+                        <button type="submit" ><img src="../../../assets/search-Icon.svg" alt=""></button>
+                    </div>
+                </form>
+            </div>
             <form [formGroup]="registerAddressForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">distrito</label>
                         <input name="district" id="district" formControlName="district" type="text">
-                        <div *ngIf="district.invalid && formDir.submitted">
+                        <div class="field-error" *ngIf="district.invalid && formDir.submitted">
                             campo obrigatório
                         </div>
                     </div>
                     <div class="input-field">
                         <label class="required" for="">município</label>
-                        <input name="municipio" id="municipio" formControlName="municipio" type="text">
-                        <div *ngIf="municipio.invalid && formDir.submitted">
+                        <input name="municipality" id="municipality" formControlName="municipality" type="text">
+                        <div class="field-error" *ngIf="municipality.invalid && formDir.submitted">
                             campo obrigatório
                         </div>
                     </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">localidade</label>
-                    <input type="text">
-                    <div *ngIf="locale.invalid && formDir.submitted">
+                    <input name="locality" id="locality" formControlName="locality" type="text">
+                    <div class="field-error" *ngIf="locality.invalid && formDir.submitted">
                         campo obrigatório
                     </div>
                 </div>
                 <div class="input-field">
-                    <label class="required" for="">centro</label>
-                    <input type="text">
-                    <div *ngIf="center.invalid && formDir.submitted">
+                    <label class="required" for="">rua</label>
+                    <input name="center" id="center" formControlName="street" type="text">
+                    <div class="field-error" *ngIf="street.invalid && formDir.submitted">
                         campo obrigatório
                     </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">designação postal</label>
-                    <input type="text">
-                    <div *ngIf="postalDesignation.invalid && formDir.submitted">
+                    <input name="postalDesignation" id="postalDesignation" formControlName="postalDesignation" type="text">
+                    <div class="field-error" *ngIf="postalDesignation.invalid && formDir.submitted">
                         campo obrigatório
                     </div>
                 </div>
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">número</label>
-                        <input type="text">
+                        <input formControlName="number" type="text">
+                        <div class="field-error" *ngIf="number.invalid && formDir.submitted">
+                            campo obrigatório
+                        </div>
                     </div>
                     <div class="input-field">
                         <label class="optional" for="">complemento</label>
-                        <input type="text">
+                        <input formControlName="complement"type="text">
                     </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">ponto de referência</label>
-                    <input type="text">
+                    <input formControlName="referencePoint" type="text">
+                    <div class="field-error" *ngIf="referencePoint.invalid && formDir.submitted">
+                        campo obrigatório
+                    </div>
                 </div>
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">nome</label>
-                        <input type="text">
+                        <input formControlName="name" type="text">
+                        <div class="field-error" *ngIf="name.invalid && formDir.submitted">
+                            <p *ngIf="name.errors?.['required']">campo obrigatório</p>
+                            <p *ngIf="name.errors?.['minLenght()']">Deve conter o nome completo</p>
+                        </div>
                     </div>
                     <div class="input-field">
-                        <label class="optional" for="">cpf</label>
-                        <input type="text">
+                        <label class="optional" for="">documento de indentidade</label>
+                        <input formControlName="docIdentity" type="text">
                     </div>
                 </div>
                 <button type="submit">salvar endereço para entrega</button>

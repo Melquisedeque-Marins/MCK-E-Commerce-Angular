@@ -1,8 +1,10 @@
-export interface Address {
-    codigoPostal: string;
-    distrito: string;
-    municipio: string;
-    localidade: string;
-    centro: string;
-    designaçãoPostal: string;
+export class Address {
+    constructor() {}
+    CP!: string;
+    concelho!: string;
+    designaçãoPostal!: string;
+    distrito!: string;
+    localidade!: string;
+    ruas!: string[];
+    
 }
