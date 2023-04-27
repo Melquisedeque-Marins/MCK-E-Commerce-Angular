@@ -1,6 +1,6 @@
 <div class="container__register-address">
     <div class="title">
-        <h1>cadastrar endereço de entrega</h1>
+        <h1>cadastrar dados para entrega</h1>
     </div>
     <div class="register-address__content">
         <div class="content__form">
@@ -41,13 +41,6 @@
                     <label class="required" for="">rua</label>
                     <input name="center" id="center" formControlName="street" type="text">
                     <div class="field-error" *ngIf="street.invalid && formDir.submitted">
-                        campo obrigatório
-                    </div>
-                </div>
-                <div class="input-field">
-                    <label class="required" for="">designação postal</label>
-                    <input name="postalDesignation" id="postalDesignation" formControlName="postalDesignation" type="text">
-                    <div class="field-error" *ngIf="postalDesignation.invalid && formDir.submitted">
                         campo obrigatório
                     </div>
                 </div>

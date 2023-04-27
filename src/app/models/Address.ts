@@ -1,10 +1,13 @@
 export class Address {
     constructor() {}
     CP!: string;
-    concelho!: string;
-    designaçãoPostal!: string;
-    distrito!: string;
-    localidade!: string;
+    Concelho!: string;
+    Distrito!: string;
+    Localidade!: string;
     ruas!: string[];
-    
+    number!: number;
+    complement!: string;
+    referencePoint!: string;
+    name!: string;
+    identificationDocument!: string;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Address } from 'src/app/models/Address';
+import { AddressService } from 'src/app/services/address.service';
 import { PostalCodeService } from 'src/app/services/postal-code.service';
 
 @Component({
@@ -14,11 +15,13 @@ export class RegisterAddressComponent implements OnInit {
   searchCPForm!: FormGroup;
   isSubmited: boolean = false;
   addressBase: Address = new Address();
+  deliveryAddress!: Address;
 
   constructor(
               private formBuilder: FormBuilder,
               private router: Router,
-              private postalCodeService: PostalCodeService
+              private postalCodeService: PostalCodeService,
+              private addressService: AddressService
               ) { }
 
   ngOnInit(): void {
@@ -28,10 +31,6 @@ export class RegisterAddressComponent implements OnInit {
   
   get municipality() {
     return this.registerAddressForm.get('municipality')!;
-  }
-  
-  get postalDesignation() {
-    return this.registerAddressForm.get('postalDesignation')!;
   }
   
   get district() {
@@ -79,7 +78,6 @@ export class RegisterAddressComponent implements OnInit {
   createRegisterAddressForm() {
     this.registerAddressForm = this.formBuilder.group({
       municipality: ['', [Validators.required]],
-      postalDesignation: ['', [Validators.required]],
       district: ['', [Validators.required]],
       locality: ['', [Validators.required]],
       street: ['', [Validators.required] ],
@@ -95,18 +93,43 @@ export class RegisterAddressComponent implements OnInit {
     this.postalCodeService.findAddress(cp).subscribe({
       next: (res) => {
         this.addressBase = res;
-        console.log(res)
-        console.log(this.addressBase.concelho)
+        this.setValuesOnForm(this.addressBase);
       }
     })
+  }
+
+  setValuesOnForm(address:Address) {
+    this.municipality.setValue(address.Concelho);
+    this.locality.setValue(address.Localidade);
+    this.district.setValue(address.Distrito);
+    this.street.setValue(address.ruas[0]);
+    this.municipality.setValue(address.Concelho);
   }
   
   onSubmit() {
     this.isSubmited = true;
     console.log('apertou o botão')
     if(this.registerAddressForm.invalid) return;
-    console.log(this.registerAddressForm.value)
-      this.router.navigateByUrl('/checkout')
+    let address = this.converFormToAddress();
+    console.log(address)
+    this.addressService.saveDeliveryAddress(address)
+    this.router.navigateByUrl('/checkout')
   }
+
+  converFormToAddress(): Address {
+    let formData = this.registerAddressForm.value;
+    let cp = this.searchCPForm.value;
+    let address = new Address();
+    address.Concelho = formData.municipality;
+    address.Distrito = formData.district;
+    address.Localidade = formData.locality;
+    address.ruas = formData.street;
+    address.number = formData.number;
+    address.name = formData.name;
+    address.CP = cp.postalCode;
+    return address;
+
+  }
+
 
 }
