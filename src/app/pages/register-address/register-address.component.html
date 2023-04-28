@@ -12,19 +12,20 @@
                         <button type="submit" ><img src="../../../assets/search-Icon.svg" alt=""></button>
                     </div>
                 </form>
+                <a href="https://www.codigo-postal.pt/" target="_blank"> não sei meu código postal</a>
             </div>
             <form [formGroup]="registerAddressForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">distrito</label>
-                        <input name="district" id="district" formControlName="district" type="text">
+                        <input class="read-only" readonly="true" name="district" id="district" formControlName="district" type="text">
                         <div class="field-error" *ngIf="district.invalid && formDir.submitted">
                             campo obrigatório
                         </div>
                     </div>
                     <div class="input-field">
                         <label class="required" for="">município</label>
-                        <input name="municipality" id="municipality" formControlName="municipality" type="text">
+                        <input class="read-only" readonly="true" name="municipality" id="municipality" formControlName="municipality" type="text">
                         <div class="field-error" *ngIf="municipality.invalid && formDir.submitted">
                             campo obrigatório
                         </div>
@@ -32,14 +33,14 @@
                 </div>
                 <div class="input-field">
                     <label class="required" for="">localidade</label>
-                    <input name="locality" id="locality" formControlName="locality" type="text">
+                    <input class="read-only" readonly="true" name="locality" id="locality" formControlName="locality" type="text">
                     <div class="field-error" *ngIf="locality.invalid && formDir.submitted">
                         campo obrigatório
                     </div>
                 </div>
                 <div class="input-field">
                     <label class="required" for="">rua</label>
-                    <input name="center" id="center" formControlName="street" type="text">
+                    <input class="read-only" readonly="true" name="center" id="center" formControlName="street" type="text" style="text-transform: capitalize">
                     <div class="field-error" *ngIf="street.invalid && formDir.submitted">
                         campo obrigatório
                     </div>
@@ -47,7 +48,7 @@
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">número</label>
-                        <input formControlName="number" type="text">
+                        <input [ngClass]="{'field-border-error':number.invalid && formDir.submitted}" formControlName="number" type="text">
                         <div class="field-error" *ngIf="number.invalid && formDir.submitted">
                             campo obrigatório
                         </div>
@@ -59,7 +60,7 @@
                 </div>
                 <div class="input-field">
                     <label class="required" for="">ponto de referência</label>
-                    <input formControlName="referencePoint" type="text">
+                    <input [ngClass]="{'field-border-error':referencePoint.invalid && formDir.submitted}" formControlName="referencePoint" type="text">
                     <div class="field-error" *ngIf="referencePoint.invalid && formDir.submitted">
                         campo obrigatório
                     </div>
@@ -67,10 +68,10 @@
                 <div class="input-row">
                     <div class="input-field">
                         <label class="required" for="">nome</label>
-                        <input formControlName="name" type="text">
+                        <input [ngClass]="{'field-border-error':name.invalid && formDir.submitted}" formControlName="name" type="text">
                         <div class="field-error" *ngIf="name.invalid && formDir.submitted">
                             <p *ngIf="name.errors?.['required']">campo obrigatório</p>
-                            <p *ngIf="name.errors?.['minLenght()']">Deve conter o nome completo</p>
+                            <p *ngIf="name.errors?.['minLenght']">Deve conter o nome completo</p>
                         </div>
                     </div>
                     <div class="input-field">
@@ -78,8 +79,9 @@
                         <input formControlName="docIdentity" type="text">
                     </div>
                 </div>
-                <button type="submit">salvar endereço para entrega</button>
+                <button type="submit">salvar endereço para entrega</button> 
             </form>
+            <button (click)="clearForm()" type="text">limpar</button>
         </div>
     </div>
 

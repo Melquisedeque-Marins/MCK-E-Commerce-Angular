@@ -1,5 +1,12 @@
 <div class="container__checkout">
-    <p>{{ deliveryData.Distrito }}</p>
+    <div class="checkout__content">
+        <div class="content-sumary">
+            <div class="sumary-details">
+                <h1>endereço de entrega</h1>
+                <app-delivery-sumary [deliveryAddress]="deliveryData"></app-delivery-sumary>
+            </div>
+            <app-order-sumary></app-order-sumary>
+        </div>
+        <app-checkout-sumary [order]="order"></app-checkout-sumary>
+    </div>
 </div>
-
-<app-checkout-sumary [order]="order"></app-checkout-sumary>

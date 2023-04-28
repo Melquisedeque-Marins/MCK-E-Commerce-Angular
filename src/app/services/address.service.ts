@@ -19,6 +19,11 @@ export class AddressService {
     return this.deliveryAddressSubject.asObservable();
   }
 
+  clearForm() {
+    this.deliveryAddress = new Address();
+    this.setDeliveryAddressToLocalStorage();
+  }
+
   private setDeliveryAddressToLocalStorage():void {
     const addressJson = JSON.stringify(this.deliveryAddress);
     localStorage.setItem('delivery-address', addressJson);

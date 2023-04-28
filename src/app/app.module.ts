@@ -30,7 +30,8 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutSumaryComponent } from './components/checkout-sumary/checkout-sumary.component';
-import { RegisterAddressComponent } from './pages/register-address/register-address.component'
+import { RegisterAddressComponent } from './pages/register-address/register-address.component';
+import { DeliverySumaryComponent } from './components/delivery-sumary/delivery-sumary.component'
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -57,6 +58,7 @@ registerLocaleData(ptBr);
     CheckoutComponent,
     CheckoutSumaryComponent,
     RegisterAddressComponent,
+    DeliverySumaryComponent,
   ],
   imports: [
     BrowserModule,

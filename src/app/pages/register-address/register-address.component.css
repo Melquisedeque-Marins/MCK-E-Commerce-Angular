@@ -75,6 +75,7 @@ form input {
 }
 
 .search-field {
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -84,11 +85,28 @@ form input {
     max-width: 300px;
 }
 
+.search-field a{
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.search-field a:hover{
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.read-only {
+    background-color: #F8F8F8;
+}
+
+
 .input-field {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     width: 100%;
+    font-size: 14px;
 }
 
 .input-row {
@@ -130,5 +148,13 @@ button:hover {
 
 .field-error p::before{
     content: "*";
+}
+
+.input-field .field-border-error {
+    width: 100%;
+    outline: none;
+    border-color: red;
+    background-color: rgba(221, 158, 158, 0.523);
+    border: 2px solid #FF0000;
 }
 

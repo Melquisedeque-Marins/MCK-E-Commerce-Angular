@@ -13,7 +13,7 @@ import { PostalCodeService } from 'src/app/services/postal-code.service';
 export class RegisterAddressComponent implements OnInit {
   registerAddressForm!: FormGroup;
   searchCPForm!: FormGroup;
-  isSubmited: boolean = false;
+  isSubmited!: boolean;
   addressBase: Address = new Address();
   deliveryAddress!: Address;
 
@@ -22,11 +22,15 @@ export class RegisterAddressComponent implements OnInit {
               private router: Router,
               private postalCodeService: PostalCodeService,
               private addressService: AddressService
-              ) { }
+              ) { 
+                this.addressService.getDeliveryAddressObservable().subscribe((address) => {
+                  this.addressBase = address;
+                })
+              }
 
   ngOnInit(): void {
-    this.createCpSearchForm();
-    this.createRegisterAddressForm();
+    this.createCpSearchForm(this.addressBase);
+    this.createRegisterAddressForm(this.addressBase);
   }
   
   get municipality() {
@@ -69,30 +73,33 @@ export class RegisterAddressComponent implements OnInit {
     return this.searchCPForm.get('postalCode');
   }
 
-  createCpSearchForm() {
+  createCpSearchForm(address: Address) {
     this.searchCPForm = this.formBuilder.group({
-      postalCode: ['', [Validators.required]]
+      postalCode: [address.CP, [Validators.required]]
     })
   }
   
-  createRegisterAddressForm() {
+  createRegisterAddressForm(address: Address) {
     this.registerAddressForm = this.formBuilder.group({
-      municipality: ['', [Validators.required]],
-      district: ['', [Validators.required]],
-      locality: ['', [Validators.required]],
-      street: ['', [Validators.required] ],
-      number: ['', [Validators.required]],
-      complement: [''],
-      referencePoint: ['', [Validators.required]],
-      name: ['', [Validators.required, Validators.minLength(10)]],
-      docIdentity: ['', [Validators.minLength(7)]] 
+      municipality: [address.Concelho, [Validators.required]],
+      district: [address.Distrito, [Validators.required]],
+      locality: [address.Localidade , [Validators.required]],
+      street: [address.ruas, [Validators.required] ],
+      number: [address.number, [Validators.required]],
+      complement: [address.complement],
+      referencePoint: [address.referencePoint, [Validators.required]],
+      name: [address.name, [Validators.required, Validators.minLength(10)]],
+      docIdentity: [address.identificationDocument, [Validators.minLength(7)]] 
     });
   }
   
   findAddress(cp:string) {
+    
+    if(cp === this.addressBase.CP) return;
     this.postalCodeService.findAddress(cp).subscribe({
       next: (res) => {
         this.addressBase = res;
+        console.log(res)
         this.setValuesOnForm(this.addressBase);
       }
     })
@@ -104,14 +111,17 @@ export class RegisterAddressComponent implements OnInit {
     this.district.setValue(address.Distrito);
     this.street.setValue(address.ruas[0]);
     this.municipality.setValue(address.Concelho);
+    this.number.setValue('');
+    this.complement.setValue('');
+    this.referencePoint.setValue('');
+    this.name.setValue('');
+    this.docIdentity.setValue('');
   }
   
   onSubmit() {
     this.isSubmited = true;
-    console.log('apertou o botão')
     if(this.registerAddressForm.invalid) return;
     let address = this.converFormToAddress();
-    console.log(address)
     this.addressService.saveDeliveryAddress(address)
     this.router.navigateByUrl('/checkout')
   }
@@ -126,10 +136,21 @@ export class RegisterAddressComponent implements OnInit {
     address.ruas = formData.street;
     address.number = formData.number;
     address.name = formData.name;
+    address.complement = formData.complement;
+    address.referencePoint = formData.referencePoint;
+    address.identificationDocument = formData.docIdentity;
     address.CP = cp.postalCode;
     return address;
 
   }
+
+  clearForm() {
+    this.createRegisterAddressForm(new Address());
+    this.createCpSearchForm(new Address());
+    this.router.navigateByUrl('/checkout/register-address');
+    this.addressService.clearForm();
+  }
+
 
 
 }
