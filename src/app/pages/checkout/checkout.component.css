@@ -1,17 +1,28 @@
 
 .container__checkout {
+    margin: 20px auto;
+}
+
+.checkout__content {
     width: 80%;
     margin: auto;
-    margin-top: 50px;
 }
 
 .content-sumary {
-    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
+    display: flex;
+    justify-content: center;
 }
 
 .sumary-details h1 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
+}
+
+.button-close {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    padding-top: 10px;
 }

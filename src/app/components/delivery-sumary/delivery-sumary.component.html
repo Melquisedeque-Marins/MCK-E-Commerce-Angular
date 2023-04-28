@@ -1,6 +1,7 @@
 <div class="container__delivery-address">
     <div class="delivery-addres__content">
-        <h4>{{ deliveryAddress.name }}</h4>
+        <h1>endereço de entrega</h1>
+        <h2>{{ deliveryAddress.name }}</h2>
         <div class="content-street-number">
             <span>{{ deliveryAddress.ruas}}, </span>
             <span>{{ deliveryAddress.number}}, </span>
@@ -10,7 +11,7 @@
             <span>{{ deliveryAddress.Concelho }} - </span>
             <span>{{ deliveryAddress.Distrito }}</span>
         </div>
-        <p>Código postal: {{ deliveryAddress.CP }}</p>
-        <a routerLink="/checkout/register-address"> alterar endereço de entrega</a>
+        <span>Código postal: {{ deliveryAddress.CP }}</span>
+        <div class="content-edit-link"><a routerLink="/checkout/register-address"> alterar endereço de entrega</a></div>
     </div>
 </div>

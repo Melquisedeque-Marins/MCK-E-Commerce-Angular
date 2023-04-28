@@ -1,0 +1,78 @@
+.container__order-sumary {
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px;
+    width: 100%;
+    background-color: rgb(248, 248, 248);
+    border-radius: 0.5rem;
+}
+
+.order-sumary__content {
+    width: 500px;
+    min-width: 300px;
+    padding: 5px 10px;
+}
+
+.order-sumary__content h1 {
+    color: #231f1e;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.content__sumary-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__sumary-items div {
+    display: flex;
+    margin-bottom: 20px;
+    color: #5A5D5A;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.open-modal {
+   margin-left: 10px;
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.content__total-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.content__confirm-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content__confirm-button a, p {
+   margin-top: 15px;
+   font-size: 14px;
+   font-weight: 500;
+   color: #5A5D5A;
+}
+
+.content__confirm-button a {
+   text-decoration: none;
+}
+
+.content__confirm-button a:hover {
+   text-decoration: underline;
+}
+
+hr {
+    margin: 5px 0;
+}

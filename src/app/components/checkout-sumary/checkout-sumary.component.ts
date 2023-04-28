@@ -8,13 +8,9 @@ import { Order } from 'src/app/models/Order';
 })
 export class CheckoutSumaryComponent implements OnInit {
   @Input() order!: Order;
-  
   constructor() {
-
   }
 
   ngOnInit(): void {
-   
   }
-
 }

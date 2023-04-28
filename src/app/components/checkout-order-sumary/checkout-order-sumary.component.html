@@ -1,0 +1,13 @@
+<div class="container__order-sumary">
+    <div class="order-sumary__content">
+        <h1>endereço de entrega</h1>
+        <div class="content__sumary-items">
+            <div><span class="total-price-qty" >{{ cart.totalCount }} {{ cart.totalCount!=1?'produtos':'produto'}}</span><span class="open-modal" (click)="openModal()"> (visualizar produtos)</span></div> <span class="total-price-value">{{ cart.totalPrice | currency: 'EUR' }}</span>
+        </div>
+        <hr>
+        <div class="content__total-price">
+            <span >Total</span> <span>{{ cart.totalPrice | currency: 'EUR' }}</span>
+        </div>
+    </div>
+</div>
+

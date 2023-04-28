@@ -2,11 +2,19 @@
     <div class="checkout__content">
         <div class="content-sumary">
             <div class="sumary-details">
-                <h1>endereço de entrega</h1>
+                
                 <app-delivery-sumary [deliveryAddress]="deliveryData"></app-delivery-sumary>
             </div>
-            <app-order-sumary></app-order-sumary>
+            <app-checkout-order-sumary></app-checkout-order-sumary>
         </div>
-        <app-checkout-sumary [order]="order"></app-checkout-sumary>
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                  <div class="button-close"><button (click)="closeModal()" type="button" class="btn-close button-close" ></button></div>
+                  <app-checkout-sumary [order]="order"></app-checkout-sumary>
+              </div>
+            </div>
+        </div>
+        <hr>
     </div>
 </div>

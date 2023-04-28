@@ -29,7 +29,21 @@ export class CheckoutComponent implements OnInit {
                }
 
   ngOnInit(): void {
-    
+
+  }
+
+  openModal() {
+    const modelDiv = document.getElementById('myModal');
+    if (modelDiv != null) {
+      modelDiv.style.display = 'block';
+    }
+  }
+
+  closeModal() {
+    const modelDiv = document.getElementById('myModal');
+    if (modelDiv != null) {
+      modelDiv.style.display = 'none';
+    }
   }
 
 }
