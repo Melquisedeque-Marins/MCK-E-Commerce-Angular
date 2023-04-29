@@ -196,3 +196,8 @@
     background-color: #003d29;
     
 }
+
+ngb-rating {
+    color: gold;
+    font-size: 20px;
+}

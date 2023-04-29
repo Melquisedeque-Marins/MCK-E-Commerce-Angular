@@ -2,7 +2,6 @@
     <div class="checkout__content">
         <div class="content-sumary">
             <div class="sumary-details">
-                
                 <app-delivery-sumary [deliveryAddress]="deliveryData"></app-delivery-sumary>
             </div>
             <app-checkout-order-sumary></app-checkout-order-sumary>
@@ -16,6 +15,8 @@
             </div>
         </div>
         <hr>
-        <app-payment-card></app-payment-card>
+        <div class="content-payment">
+            <app-payment-card></app-payment-card>
+        </div>
     </div>
 </div>

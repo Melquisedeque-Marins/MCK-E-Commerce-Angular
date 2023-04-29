@@ -10,6 +10,8 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ProductCardDetailsComponent implements OnInit {
   @Input() product!:Product | any;
+  @Input() currentRating!: number;
+
 
   constructor( private cartService:CartService,
     private router:Router
