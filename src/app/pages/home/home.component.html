@@ -9,7 +9,7 @@
         <app-section-title title="Produtos para você!"></app-section-title>
         <div class="content__product-card">
             <div *ngFor="let item of productList">
-                <app-product-card [product]="item"></app-product-card>
+                <app-product-card [currentRating]="item.rate"  [product]="item"></app-product-card>
             </div>
         </div>
         <div class="content__banner">

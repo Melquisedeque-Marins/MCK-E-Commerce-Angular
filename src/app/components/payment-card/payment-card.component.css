@@ -1,0 +1,12 @@
+.payment-card__content h1 {
+    color: #231f1e;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-options-card {
+    height: 200px;
+    width: 300px;
+    background-color: #CCC;
+}

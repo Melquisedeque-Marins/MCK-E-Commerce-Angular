@@ -9,7 +9,7 @@
                     <label class="required" for="">código postal</label>
                     <div class="search-box">
                         <input #cp formControlName="postalCode" type="search">
-                        <button type="submit" ><img src="../../../assets/search-Icon.svg" alt=""></button>
+                        <button class="search-box-btn" type="submit" ><img src="../../../assets/search-Icon.svg" alt=""></button>
                     </div>
                 </form>
                 <a href="https://www.codigo-postal.pt/" target="_blank"> não sei meu código postal</a>
@@ -81,7 +81,6 @@
                 </div>
                 <button type="submit">salvar endereço para entrega</button> 
             </form>
-            <button (click)="clearForm()" type="text">limpar</button>
         </div>
     </div>
 

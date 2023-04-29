@@ -2,7 +2,7 @@ import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +33,9 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { CheckoutSumaryComponent } from './components/checkout-sumary/checkout-sumary.component';
 import { RegisterAddressComponent } from './pages/register-address/register-address.component';
 import { DeliverySumaryComponent } from './components/delivery-sumary/delivery-sumary.component';
-import { CheckoutOrderSumaryComponent } from './components/checkout-order-sumary/checkout-order-sumary.component'
+import { CheckoutOrderSumaryComponent } from './components/checkout-order-sumary/checkout-order-sumary.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PaymentCardComponent } from './components/payment-card/payment-card.component'
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -62,6 +64,7 @@ registerLocaleData(ptBr);
     RegisterAddressComponent,
     DeliverySumaryComponent,
     CheckoutOrderSumaryComponent,
+    PaymentCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,8 @@ registerLocaleData(ptBr);
           allowedUrls: ['http://localhost:8080'],
           sendAccessToken: true
       }
-  })
+  }),
+    NgbModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

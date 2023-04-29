@@ -1,6 +1,7 @@
 
 .container__checkout {
     margin: 20px auto;
+    height: calc(100vh - 80px);
 }
 
 .checkout__content {
