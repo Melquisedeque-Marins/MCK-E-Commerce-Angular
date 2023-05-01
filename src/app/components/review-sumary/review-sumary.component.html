@@ -4,6 +4,8 @@
     </div>
     <div class="review-sumary-info">
         <div class="star-rating">
+            <ngb-rating [max]="5" [(rate)]="currentRating" [readonly]="true"></ngb-rating>
+
         <!--    <span>{{product?.rate}}</span>
             <star-rating
             [value]="product?.rate"

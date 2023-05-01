@@ -8,6 +8,8 @@ import { Product } from 'src/app/models/Product';
 })
 export class ReviewSumaryComponent implements OnInit {
 @Input() product?:Product | any;
+@Input() currentRating!: number;
+
 
   constructor() { }
 

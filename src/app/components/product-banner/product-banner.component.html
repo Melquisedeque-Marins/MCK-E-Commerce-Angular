@@ -1,7 +1,7 @@
 <div [ngStyle]="{'background':background}"  class="container__banner">
     <div *ngIf="product?.id" [ngStyle]="{'flex-direction':direction}" class="banner__content">
         <div class="banner__content-left">
-            <h1 [ngStyle]="{'color':textColor}"> {{ product?.description }}</h1>
+            <h1 [ngStyle]="{'color':textColor}"> {{ product?.name }}</h1>
             <div class="content-left__price">
                 <div class="price-original">
                     <div class="value">
