@@ -10,11 +10,18 @@
         </div>
         <hr>
         <div class="content__confirm-button">
-            <a routerLink="/checkout/register-address">
-                <app-generic-button padding="8px 40px" width="100%" buttonText="continuar" ></app-generic-button>
-            </a>
+            <div class="button" *ngIf="!address; else checkout">
+                <a routerLink="/checkout/register-address">
+                    <app-generic-button padding="8px 40px" width="100%" buttonText="continuar" ></app-generic-button>
+                </a>
+            </div>
+            <ng-template #checkout>
+                <a routerLink="/checkout">
+                    <app-generic-button padding="8px 40px" width="100%" buttonText="continuar" ></app-generic-button>
+                </a>
+              </ng-template>
             <a routerLink="/"><span>adicionar mais produtos</span></a>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <p>Frete grátis para compras acima de € 300,00</p>
         </div>
     </div>
 </div>
