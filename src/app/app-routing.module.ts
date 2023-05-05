@@ -6,6 +6,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { RegisterAddressComponent } from './pages/register-address/register-address.component';
 import { LoggedGuard } from './guard/logged.guard';
+import { RatingComponent } from './pages/rating/rating.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch:'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'cart', component: CartComponent },
   {path: 'checkout/register-address', component: RegisterAddressComponent, pathMatch: 'full', canActivate: [ LoggedGuard ] },
   {path: 'checkout', component: CheckoutComponent, canActivate: [ LoggedGuard ] },
+  {path: 'rating', component: RatingComponent, canActivate: [ LoggedGuard ] },
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

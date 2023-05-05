@@ -1,27 +1,64 @@
-# MckECommerceFront
+# MCK-E-Commerce (frontend - Angular)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+## 🚧 Projeto em construção 🚧
 
-## Development server
+<a id="Sobre"></a>
+MCK-E-Commerce é uma aplicação destinada a um sistema de e-commerce e está sendo desenvolvida utilizando o framework Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<a id="Indice"></a>
+## Índice
+<!--ts-->
+* [Sobre](#Sobre)
+* [Índice](#Indice)
+* [Funcionalidades](#Funcionalidades)
+* [Tecnologias utilizadas](#Tecnologias)
+* [Acesso ao projeto](#Acesso_ao_projeto)
+* [Pré-requisitos](#Pre-requisitos)
+* [Instruções para download e execução do projeto](#Instruções)
+* [Autor](#Autor)
+<!--te-->
 
-## Code scaffolding
+<a id="Funcionalidades"></a>
+## 🔨 Funcionalidades 
+- Tela de catalogo;
+- Tela de login;
+- Campo de busca por nome do produto;
+- Tela de detalhes do produto;
+- Carriho de compras;
+- Banners promocionais;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<a id="Tecnologias"></a>
+## 🛠️️ Tecnologias utilizadas
 
-## Build
+### - Linguagem e Frameworks
+- Angular 14
+- Typescript
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### - IDE's
+- VS Code
 
-## Running unit tests
+### - Segurança
+- Keycloak
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<a id="Acesso_ao_projeto"></a>
+## 📁 Acesso ao projeto
 
-## Running end-to-end tests
+Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/Melquisedeque-Marins/MCK-E-Commerce-Angular).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<a id="Pre-requisitos"></a>
+## ✔ Pré-requisitos
 
-## Further help
+✔️ **Node** 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+✔️ **Acesso a internet**
+
+<a id="Autor"></a>
+## Autor
+<a href="https://github.com/Melquisedeque-Marins">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/93653645?v=4" width="120px;" alt=""/>
+<br />
+ <sub><b>Melquisedeque Marins Junior</b></sub></a> <a href="https://www.linkedin.com/in/melquisedeque-marins-junior-324291230"></a>
+
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/melquisedeque-marins-junior-324291230)
+
