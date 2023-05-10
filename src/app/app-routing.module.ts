@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'cart', component: CartComponent },
   {path: 'checkout/register-address', component: RegisterAddressComponent, pathMatch: 'full', canActivate: [ LoggedGuard ] },
   {path: 'checkout', component: CheckoutComponent, canActivate: [ LoggedGuard ] },
-  {path: 'rating', component: RatingComponent, canActivate: [ LoggedGuard ] },
+  {path: 'rating/:id', component: RatingComponent, canActivate: [ LoggedGuard ] },
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

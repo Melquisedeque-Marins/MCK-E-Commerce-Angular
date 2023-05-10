@@ -1,3 +1,13 @@
-<div>
-    <h1>AVALIE O PRODUTO</h1>
+<div class="container__rating">
+    <div class="rating__content">
+        <h1>{{ product.name }}</h1>
+        <img src="{{ product.coverImg}}" alt="">
+        <div class="form">
+            <form action="">
+                <label for="">comentario:</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <button type="submit">publicar comentario</button>
+            </form>
+        </div>
+    </div>
 </div>
