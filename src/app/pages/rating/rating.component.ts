@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class RatingComponent implements OnInit {
   product!: Product;
+  currentRating!: number;
 
   constructor( private productService: ProductService,
                private route: ActivatedRoute) {
@@ -19,6 +20,7 @@ export class RatingComponent implements OnInit {
           {
             next: (res) => {
               this.product = res
+              this.currentRating = res.rate
             },
             error: (err) => console.log(err)
         });

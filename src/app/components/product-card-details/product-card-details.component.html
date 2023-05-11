@@ -23,16 +23,17 @@
                 <div class="content__details-reviews">
                     <div class="star">
                         <ngb-rating [max]="5" [(rate)]="currentRating" [readonly]="true"></ngb-rating>
-                     <!--   <star-rating 
-                        [value]="product?.rate"
-                        [totalstars]="5"
-                        checkedcolor="#F2C832"
-                        uncheckedcolor="#CCC"
-                        size="18px"
-                        [readonly]="true">
+                        <!--   <star-rating 
+                            [value]="product?.rate"
+                            [totalstars]="5"
+                            checkedcolor="#F2C832"
+                            uncheckedcolor="#CCC"
+                            size="18px"
+                            [readonly]="true">
                         </star-rating> -->
                         <span> ({{ product?.qtyReviews }}) {{product?.qtyReviews!=1?'avaliações':'avaliação'}}</span>
                     </div>
+                    <a href="#reviews">ver avaliações</a>
                     
                 </div>
                 <div class="details-title__price">
@@ -49,7 +50,7 @@
                     </div>
                 </div>
             </div>
-            <div class="consult-shipping">
+            <div class="consult-shipping" id="reviews">
                 <h3>Calcular frete e prazo</h3>
                 <div class="consult-shipping__input-box">
                     <input type="text" placeholder="Digite seu cep">

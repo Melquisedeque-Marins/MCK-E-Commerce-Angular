@@ -1,12 +1,39 @@
 <div class="container__rating">
+    <app-section-title title="avalie este produto"></app-section-title>
     <div class="rating__content">
-        <h1>{{ product.name }}</h1>
-        <img src="{{ product.coverImg}}" alt="">
+        <div class="content-product-details">
+            <img src="{{ product.coverImg}}" alt="">
+            <h1>{{ product.name }}</h1>
+        </div>
         <div class="form">
             <form action="">
-                <label for="">comentario:</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-                <button type="submit">publicar comentario</button>
+                <div class="star">
+                    <h1>o que você achou deste produto?</h1>
+                    <ngb-rating [max]="5" [(rate)]="currentRating" [readonly]="false"></ngb-rating>
+                    <span> ({{ product.qtyReviews }})</span>
+                    <!-- <star-rating 
+                      [value]="product.rate"
+                      [totalstars]="5"
+                      checkedcolor="#F2C832"
+                      uncheckedcolor="#CCC"
+                      size="16px"
+                      [readonly]="true">
+                      </star-rating> --> 
+                </div>
+                <div class="content__review-form">
+                    <div class="title">
+                        <h1>avaliação</h1>
+                    </div>
+                    <div class="review-form-field">
+                        <label for="">titulo:</label>
+                        <textarea name="" id="" cols="30" rows="1" placeholder="titulo da avaliação"></textarea>
+                    </div>
+                    <div class="review-form-field">
+                        <label for="">comentario:</label>
+                        <textarea name="" id="" cols="30" rows="5" placeholder="sua avaliação"></textarea>
+                    </div>
+                    <button type="submit">publicar comentario</button>
+                </div>
             </form>
         </div>
     </div>
