@@ -1,5 +1,4 @@
 .container__footer {
-    margin-bottom: 50px;
 }
 
 .footer__content {
@@ -9,8 +8,34 @@
     grid-template-columns: 2.25fr 1fr 1fr 1fr 1fr;;
 }
 
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 20px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+    padding: 3px 5px;
+    max-width: 190px;
+    max-height: 50px;
+}
+
+.logo h1 {
+    color: #231F1E;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0;
+}
+
+
+.logo img{
+    width: 33px;
+    height: 33px;
+    margin-right: 5px;
+}
+
 .content__grid-main img {
-    margin-bottom: 30px;
 }
 
 .content__grid-main p {
