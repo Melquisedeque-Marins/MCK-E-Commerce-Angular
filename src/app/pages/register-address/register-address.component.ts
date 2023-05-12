@@ -121,12 +121,12 @@ export class RegisterAddressComponent implements OnInit {
   onSubmit() {
     this.isSubmited = true;
     if(this.registerAddressForm.invalid) return;
-    let address = this.converFormToAddress();
+    let address = this.convertFormToAddress();
     this.addressService.saveDeliveryAddress(address)
     this.router.navigateByUrl('/checkout')
   }
 
-  converFormToAddress(): Address {
+  convertFormToAddress(): Address {
     let formData = this.registerAddressForm.value;
     let cp = this.searchCPForm.value;
     let address = new Address();

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/Product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -11,9 +12,14 @@ import { ProductService } from 'src/app/services/product.service';
 export class RatingComponent implements OnInit {
   product!: Product;
   currentRating!: number;
+  ratingForm!: FormGroup;
+  isSubmited!: boolean;
 
-  constructor( private productService: ProductService,
-               private route: ActivatedRoute) {
+  constructor(private productService: ProductService,
+              private route: ActivatedRoute,
+              private formBuilder: FormBuilder,
+              private router: Router
+              ){
     route.params.subscribe( params => {
       if (params['id']) {
         this.productService.getProduct(params['id']).subscribe( 
@@ -30,6 +36,22 @@ export class RatingComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.createRatingForm();
+  }
+
+  createRatingForm() {
+    this.ratingForm = this.formBuilder.group({
+      rate: [''],
+      title: ['', [Validators.minLength(10)]],
+      review: ['', [Validators.required]],
+    });
+  }
+
+  onSubmit() {
+    this.isSubmited = true;
+    if(this.ratingForm.invalid) return;
+    console.log(`/products/${this.product.id}`)
+    this.router.navigateByUrl(`/products/${this.product.id}`)
   }
 
 }
