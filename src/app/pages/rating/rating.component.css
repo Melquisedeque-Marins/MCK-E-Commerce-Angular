@@ -17,6 +17,7 @@
 
 .rating__content h1 {
    font-size: 22px;
+   margin: 0;
 }
 
 .content-product-details {
@@ -25,22 +26,39 @@
     width: 60%;
     margin: auto;
     margin-bottom: 20px;
+    padding: 40px 20px;
+    background-color: #FAFAFA;
+    border-radius: 20px;
 }
 
 .content__review-form {
-    border: 1px solid #CCC;
+    border: 1px solid #cccccc7e;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 8px 10px 18px -8px rgba(99,98,99,1);
+}
+
+.title h1::after {
+    content: " (opcional)";
+    font-weight: 500;
+    margin-right: 5px;
+    color: #5a5d5ad3;
 }
 
 .title h1 {
     color: #231f1e;
     font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.star p {
+    color: #5A5D5A;
+    font-size: 16px;
 }
 
 .review-form-field {
@@ -53,6 +71,13 @@
 .review-form-field textarea {
     border-radius: 10px;
     padding: 10px 20px; 
+    margin-bottom: 5px;
+}
+
+.review-form-field p {
+    border-radius: 10px;
+    padding-left: 20px;
+    color: #5A5D5A; 
 }
 
 form {
@@ -60,6 +85,15 @@ form {
     flex-direction: column;
     width: 60%;
     margin: auto;
+}
+
+form h1 {
+    font-size: 18px;
+}
+
+form p {
+    font-size: 14px;
+    margin: 0;
 }
 
 button {
@@ -75,6 +109,7 @@ button {
     max-width: 400px ;
     margin: 0 auto;
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 button:hover {
@@ -86,5 +121,7 @@ button:hover {
 
 ngb-rating {
     color: gold;
-    font-size: 50px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    
 }

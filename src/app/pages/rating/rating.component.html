@@ -9,8 +9,8 @@
             <form action="">
                 <div class="star">
                     <h1>o que você achou deste produto?</h1>
+                    <p>quanto mais estrelas melhor a avaliação</p>
                     <ngb-rating [max]="5" [(rate)]="currentRating" [readonly]="false"></ngb-rating>
-                    <span> ({{ product.qtyReviews }})</span>
                     <!-- <star-rating 
                       [value]="product.rate"
                       [totalstars]="5"
@@ -22,15 +22,17 @@
                 </div>
                 <div class="content__review-form">
                     <div class="title">
-                        <h1>avaliação</h1>
+                        <h1>deixe um comentario</h1>
                     </div>
                     <div class="review-form-field">
                         <label for="">titulo:</label>
                         <textarea name="" id="" cols="30" rows="1" placeholder="titulo da avaliação"></textarea>
+                        <p>mínimo de 3 e máximo de 30 caracteres</p>
                     </div>
                     <div class="review-form-field">
                         <label for="">comentario:</label>
                         <textarea name="" id="" cols="30" rows="5" placeholder="sua avaliação"></textarea>
+                        <p>mínimo 2 palavras e 10 caracteres</p>
                     </div>
                     <button type="submit">publicar comentario</button>
                 </div>
