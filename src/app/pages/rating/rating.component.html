@@ -2,15 +2,15 @@
     <app-section-title title="avalie este produto"></app-section-title>
     <div class="rating__content">
         <div class="content-product-details">
-            <img src="{{ product.coverImg}}" alt="">
-            <h1>{{ product.name }}</h1>
+            <img src="{{ product?.coverImg}}" alt="">
+            <h1>{{ product?.name }}</h1>
         </div>
         <div class="form">
             <form [formGroup]="ratingForm" (ngSubmit)="onSubmit()">
                 <div class="star">
                     <h1>o que você achou deste produto?</h1>
                     <p>quanto mais estrelas melhor a avaliação</p>
-                    <ngb-rating [max]="5" [(rate)]="currentRating" [readonly]="false"></ngb-rating>
+                    <ngb-rating formControlName="rate" [max]="5" [(rate)]="currentRating" [readonly]="false"></ngb-rating>
                     <!-- <star-rating 
                       [value]="product.rate"
                       [totalstars]="5"

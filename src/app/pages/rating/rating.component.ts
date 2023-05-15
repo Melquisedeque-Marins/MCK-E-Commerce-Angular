@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./rating.component.css']
 })
 export class RatingComponent implements OnInit {
-  product!: Product;
+  product?: Product | null;
   currentRating!: number;
   ratingForm!: FormGroup;
   isSubmited!: boolean;
@@ -50,8 +50,8 @@ export class RatingComponent implements OnInit {
   onSubmit() {
     this.isSubmited = true;
     if(this.ratingForm.invalid) return;
-    console.log(`/products/${this.product.id}`)
-    this.router.navigateByUrl(`/products/${this.product.id}`)
+    console.log(`/products/${this.product?.id}`)
+    this.router.navigateByUrl(`/products/${this.product?.id}`)
   }
 
 }
