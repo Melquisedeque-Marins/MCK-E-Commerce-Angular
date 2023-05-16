@@ -28,6 +28,43 @@ MCK-E-Commerce é uma aplicação destinada a um sistema de e-commerce e está s
 - Carriho de compras;
 - Banners promocionais;
 
+<a id="Layout"></a>
+## 💻 Layout da aplicação
+
+### ✅ Tela Inicial
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20home.png)
+
+### ✅ Catálogo de produtos
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20product%20card.png)
+
+### ✅ Banner e publicidade
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20banner%20and%20card.png)
+
+### ✅ Tela do carrinho (vazio)
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20cart%20page%20empty.png)
+
+### ✅ Tela do carrinho
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20cart%20page.png)
+
+### ✅ Tela de detalhes do produto
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20product%20details.png)
+
+### ✅ Tela de detalhes do produto (info)
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20product%20details%20s.png)
+
+### ✅ Tela de avaliação do produto
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20rating%20page.png)
+
+### ✅ Tela de cadastro do endereço para entrega 
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20shipping%20infos.png)
+
+### ✅ Tela de checkout 
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20checkout%20page.png)
+
+### ✅ Tela de checkout (pop-up) produtos do pedido
+![](https://raw.githubusercontent.com/Melquisedeque-Marins/MCK-E-Commerce-Angular/main/src/assets/git%20images/MCK-Shop/MCK%20Shop%20order%20sumary.png)
+
+
 <a id="Tecnologias"></a>
 ## 🛠️️ Tecnologias utilizadas
 
