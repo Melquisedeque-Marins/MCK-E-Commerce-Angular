@@ -1,0 +1,33 @@
+.container__pix-payment {
+    margin: auto;
+    width: 60%;
+}
+
+.pix-payment__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-title {
+
+}
+
+.content-title img {
+    margin-left: 5px;
+    width: 30px;
+}
+
+.content-info {
+    display: flex;
+}
+
+.content-info img {
+    width: 150px;
+    margin-right: 20px;
+
+}
+
+.info-text p {
+    margin: 0;
+}

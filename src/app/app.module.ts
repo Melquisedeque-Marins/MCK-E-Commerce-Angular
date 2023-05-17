@@ -36,7 +36,8 @@ import { DeliverySumaryComponent } from './components/delivery-sumary/delivery-s
 import { CheckoutOrderSumaryComponent } from './components/checkout-order-sumary/checkout-order-sumary.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PaymentCardComponent } from './components/payment-card/payment-card.component';
-import { RatingComponent } from './pages/rating/rating.component'
+import { RatingComponent } from './pages/rating/rating.component';
+import { PixPaymentComponent } from './components/pix-payment/pix-payment.component'
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -67,6 +68,7 @@ registerLocaleData(ptBr);
     CheckoutOrderSumaryComponent,
     PaymentCardComponent,
     RatingComponent,
+    PixPaymentComponent,
   ],
   imports: [
     BrowserModule,

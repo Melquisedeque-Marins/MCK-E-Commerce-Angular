@@ -4,7 +4,8 @@
 ## 🚧 Projeto em construção 🚧
 
 <a id="Sobre"></a>
-MCK-E-Commerce é uma aplicação destinada a um sistema de e-commerce e está sendo desenvolvida utilizando o framework Angular.
+MCK-E-Commerce é uma aplicação destinada a um sistema de comercio on-line e s stack frontend está sendo desenvolvida utilizando o framework Angular.
+Este projeto em sua versão MCK Shop (versão estudo) possui funcionalidades relevantes que simulam uma experiência real para o utilizador. Atualmente está em fase de desenvolvimento e brevemente estará disponivel para para apreciação de todos.
 
 <a id="Indice"></a>
 ## Índice
@@ -31,6 +32,7 @@ MCK-E-Commerce é uma aplicação destinada a um sistema de e-commerce e está s
 - Avaliação de produtos;
 - Carriho de compras;
 - Cadastro de endereço para entrega;
+- Busca e auto preenchimento de dados de endereço;
 - Resumo do pedido; 
 
 <a id="Layout"></a>
@@ -102,7 +104,7 @@ Você pode acessar os arquivos do projeto clicando [aqui](https://github.com/Mel
 <a href="https://github.com/Melquisedeque-Marins">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/93653645?v=4" width="120px;" alt=""/>
 <br />
- <sub><b>Melquisedeque Marins Junior</b></sub></a> <a href="https://www.linkedin.com/in/melquisedeque-marins-junior-324291230"></a>
+ <sub><b>Melquisedeque Marins Junior</b></sub></a> <a href="https://www.linkedin.com/in/melquisedeque-marins-junior-324291230"></a> </br>
  Desenvolvedor backend (Java/Spring) e entusiasta de desenvolvimento frontend (Angular). 
  Atualmente buscando uma oportunidade de trabalho em vossa empresa 😎.
 
