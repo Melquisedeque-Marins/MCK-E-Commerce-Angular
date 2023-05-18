@@ -16,13 +16,40 @@
         </div>
         <hr>
         <div class="content-payment">
-            <app-payment-card></app-payment-card>
+            <div class="container__payment-card">
+                <div class="payment-card__content">
+                    <h1>formas de pagamento</h1>
+                    <div class="content__payment-options">
+                        <div (click)="onClick('card')" class="payment-options-card">
+                            <img src="https://i0.wp.com/cebolaverde.com.br/wp-content/uploads/2023/01/imagem_2023-01-11_233321194.png?fit=256%2C256&ssl=1" alt="">
+                        </div>
+                        <div (click)="onClick('pix')" class="payment-options-card">
+                            <p> pix </p>
+                        </div>
+                        <div (click)="onClick('paypal')" class="payment-options-card">
+                            <img src="https://logospng.org/download/paypal/logo-paypal-256.png" alt="">
+                        </div>
+                        <div (click)="onClick('boleto')" class="payment-options-card">
+                            <p> boleto </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <app-payment-card></app-payment-card> -->
         </div>
-        <div class="content-payment-way">
-            <app-pix-payment></app-pix-payment>
-        </div>
-        <div class="content-payment-way">
-            <app-card-payment></app-card-payment>
+        <div [ngSwitch]="type" class="content-payment-way" >
+            <div *ngSwitchCase="'pix'" class="content-payment-way">
+                <app-pix-payment></app-pix-payment>
+            </div>
+            <div *ngSwitchCase="'paypal'" class="content-payment-way">
+                <app-pix-payment></app-pix-payment>
+            </div>
+            <div *ngSwitchCase="'boleto'" class="content-payment-way">
+                <app-pix-payment></app-pix-payment>
+            </div>
+            <div *ngSwitchDefault class="content-payment-way">
+                <app-card-payment></app-card-payment>
+            </div>
         </div>
     </div>
 </div>

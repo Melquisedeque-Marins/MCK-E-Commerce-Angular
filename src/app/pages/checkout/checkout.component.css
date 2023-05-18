@@ -33,3 +33,65 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.content-payment-way {
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+.container__payment-card {
+}
+
+.payment-card__content h1 {
+    color: #231f1e;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.content__payment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    
+}
+
+.payment-options-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    min-width: 180px;
+    background-color: #F5F6F6;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.payment-options-card p {
+   font-size: 20px;
+   font-weight: 700;
+   margin: 0;
+   transition: 0.3s;
+   color: #231f1e;
+}
+
+.payment-options-card img {
+  height: 90px;
+  transition: 0.3s;
+}
+
+.payment-options-card:hover {
+    border: 2px solid #ccc;
+}
+
+.payment-options-card:hover > img {
+    transform: scale(1.1);
+}
+
+.payment-options-card:hover > p {
+    transform: scale(1.2);
+}

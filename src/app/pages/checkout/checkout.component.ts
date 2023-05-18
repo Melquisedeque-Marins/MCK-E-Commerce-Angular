@@ -14,6 +14,7 @@ export class CheckoutComponent implements OnInit {
   order: Order = new Order();
   checkoutForm!: FormGroup;
   deliveryData!: Address;
+  type!: string;
 
   constructor(cartService: CartService,
               private addressService: AddressService,
@@ -25,7 +26,6 @@ export class CheckoutComponent implements OnInit {
                 this.addressService.getDeliveryAddressObservable().subscribe((address) => {
                   this.deliveryData = address;
                 })
-
                }
 
   ngOnInit(): void {
@@ -44,6 +44,10 @@ export class CheckoutComponent implements OnInit {
     if (modelDiv != null) {
       modelDiv.style.display = 'none';
     }
+  }
+
+  onClick(type:string) {
+    this.type = type;
   }
 
 }

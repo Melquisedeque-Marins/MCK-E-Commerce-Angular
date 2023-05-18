@@ -1,0 +1,93 @@
+.container__card-payment {
+
+}
+
+.card-payment__content {
+    width: 60%;
+    margin: auto;
+}
+
+.content-title span {
+    color: #231F1E;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.content-title img {
+    margin-right: 5px;
+    width: 30px;
+}
+
+.content-title p {
+    color: #5A5D5A;
+    margin: 5px 0 20px 0;
+}
+
+
+.content-img {
+    display: flex;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.content-img img{
+    max-width: 400px;
+    min-width: 250px;
+    margin: auto;
+}
+
+form {
+    color: #5A5D5A;
+}
+
+.content-form-field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 16px;
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.content-form-field label {
+    color: #231f1e;
+    height: 25px;
+}
+
+form .required::before {
+    content: "*";
+    margin-right: 2px;
+    color: red;
+}
+
+.content-form-field input {
+    border: 1px solid #5A5D5A;
+    border-radius: 10px;
+    height: 40px;
+    padding: 5px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+}
+
+.lg {
+    width: 500px;
+}
+
+.sm {
+    width: 100px;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.box input {
+    margin: 0;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+
+}
