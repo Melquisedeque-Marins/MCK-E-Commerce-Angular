@@ -14,7 +14,7 @@ export class CheckoutComponent implements OnInit {
   order: Order = new Order();
   checkoutForm!: FormGroup;
   deliveryData!: Address;
-  type!: string;
+  type: string = 'card';
 
   constructor(cartService: CartService,
               private addressService: AddressService,

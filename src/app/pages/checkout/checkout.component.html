@@ -25,12 +25,11 @@
                         </div>
                         <div (click)="onClick('pix')" class="payment-options-card">
                             <img src="https://logospng.org/download/pix/logo-pix-256.png" alt="">
-
                         </div>
                         <div (click)="onClick('paypal')" class="payment-options-card">
                             <img src="https://logospng.org/download/paypal/logo-paypal-256.png" alt="">
                         </div>
-                        <div (click)="onClick('boleto')" class="payment-options-card">
+                        <div (click)="onClick('mbway')" class="payment-options-card">
                             <img src="https://www.andradeexpress.pt/images/pagamento/mbway.png" alt="">
                         </div>
                         <div (click)="onClick('boleto')" class="payment-options-card">
@@ -44,16 +43,17 @@
         <div [ngSwitch]="type" class="content-payment-way" >
             <div *ngSwitchCase="'pix'" class="content-payment-way">
                 <app-pix-payment></app-pix-payment>
-            </div>
-            <div *ngSwitchCase="'paypal'" class="content-payment-way">
-                <app-pix-payment></app-pix-payment>
+                <button>FECHAR PEDIDO</button>
             </div>
             <div *ngSwitchCase="'boleto'" class="content-payment-way">
-                <app-pix-payment></app-pix-payment>
+                <app-bank-slip-payment></app-bank-slip-payment>
+                <button>FECHAR PEDIDO</button>
             </div>
-            <div *ngSwitchDefault class="content-payment-way">
+            <div *ngSwitchCase="'card'" class="content-payment-way">
                 <app-card-payment></app-card-payment>
+                <button>FECHAR PEDIDO</button>
             </div>
+           
         </div>
     </div>
 </div>

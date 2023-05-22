@@ -38,7 +38,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PaymentCardComponent } from './components/payment-card/payment-card.component';
 import { RatingComponent } from './pages/rating/rating.component';
 import { PixPaymentComponent } from './components/pix-payment/pix-payment.component';
-import { CardPaymentComponent } from './components/card-payment/card-payment.component'
+import { CardPaymentComponent } from './components/card-payment/card-payment.component';
+import { BankSlipPaymentComponent } from './components/bank-slip-payment/bank-slip-payment.component'
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -71,6 +72,7 @@ registerLocaleData(ptBr);
     RatingComponent,
     PixPaymentComponent,
     CardPaymentComponent,
+    BankSlipPaymentComponent,
   ],
   imports: [
     BrowserModule,
