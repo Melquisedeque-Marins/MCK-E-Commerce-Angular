@@ -9,9 +9,8 @@
     align-items: center;
 }
 
-.content-payment-form {
-    display: flex;
-    align-items: center;
+.content-title {
+    width: 100%;
 }
 
 .content-title span {

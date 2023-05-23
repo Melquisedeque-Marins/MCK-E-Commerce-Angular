@@ -40,16 +40,16 @@
             </div>
             <!-- <app-payment-card></app-payment-card> -->
         </div>
-        <div [ngSwitch]="type" class="content-payment-way" >
-            <div *ngSwitchCase="'pix'" class="content-payment-way">
+        <div [ngSwitch]="type" class="content-payment-type" >
+            <div *ngSwitchCase="'pix'" class="content-payment-details">
                 <app-pix-payment></app-pix-payment>
                 <button>FECHAR PEDIDO</button>
             </div>
-            <div *ngSwitchCase="'boleto'" class="content-payment-way">
+            <div *ngSwitchCase="'boleto'" class="content-payment-details">
                 <app-bank-slip-payment></app-bank-slip-payment>
                 <button>FECHAR PEDIDO</button>
             </div>
-            <div *ngSwitchCase="'card'" class="content-payment-way">
+            <div *ngSwitchCase="'card'" class="content-payment-details">
                 <app-card-payment></app-card-payment>
                 <button>FECHAR PEDIDO</button>
             </div>

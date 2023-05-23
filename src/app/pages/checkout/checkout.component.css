@@ -34,16 +34,14 @@
   margin-bottom: 50px;
 }
 
-.content-payment-way {
+.content-payment-type {
     margin-bottom: 40px;
 }
 
-
-
-
-
-
-.container__payment-card {
+.content-payment-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .payment-card__content h1 {
@@ -94,4 +92,26 @@
 
 .payment-options-card:hover > p {
     transform: scale(1.2);
+}
+
+.content-payment-details button {
+    font-family: Eina01, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #003D29;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: 1px solid #003D29;
+    cursor: pointer;
+    max-width: 400px ;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.content-payment-details button:hover {
+    color: #FFF;
+    background-color: #231F1E;
+    transition: .5s;
 }
