@@ -53,6 +53,10 @@
                 <app-card-payment></app-card-payment>
                 <button>FECHAR PEDIDO</button>
             </div>
+            <div *ngSwitchCase="'paypal'" class="content-payment-details">
+                <app-paypal-payment></app-paypal-payment>
+                <button>FECHAR PEDIDO</button>
+            </div>
            
         </div>
     </div>
