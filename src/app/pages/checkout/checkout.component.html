@@ -20,19 +20,19 @@
                 <div class="payment-card__content">
                     <h1>formas de pagamento</h1>
                     <div class="content__payment-options">
-                        <div (click)="onClick('card')" class="payment-options-card">
+                        <div (click)="onClick('card')" [ngClass]="{'active':type==='card'}" class="payment-options-card">
                             <img src="https://i0.wp.com/cebolaverde.com.br/wp-content/uploads/2023/01/imagem_2023-01-11_233321194.png?fit=256%2C256&ssl=1" alt="">
                         </div>
-                        <div (click)="onClick('pix')" class="payment-options-card">
+                        <div (click)="onClick('pix')" [ngClass]="{'active':type==='pix'}" class="payment-options-card">
                             <img src="https://logospng.org/download/pix/logo-pix-256.png" alt="">
                         </div>
-                        <div (click)="onClick('paypal')" class="payment-options-card">
+                        <div (click)="onClick('paypal')" [ngClass]="{'active':type==='paypal'}" class="payment-options-card">
                             <img src="https://logospng.org/download/paypal/logo-paypal-256.png" alt="">
                         </div>
-                        <div (click)="onClick('mbway')" class="payment-options-card">
+                        <div (click)="onClick('mbway')" [ngClass]="{'active':type==='mbway'}" class="payment-options-card">
                             <img src="https://www.andradeexpress.pt/images/pagamento/mbway.png" alt="">
                         </div>
-                        <div (click)="onClick('boleto')" class="payment-options-card">
+                        <div (click)="onClick('boleto')" [ngClass]="{'active':type==='boleto'}" class="payment-options-card">
                             <img src="https://www.shareicon.net/data/256x256/2016/07/16/636201_boleto_480x300.png" alt="">
                         </div>
                     </div>
