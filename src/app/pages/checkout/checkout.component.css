@@ -118,7 +118,8 @@
 
 .active {
     border: 1px solid #CCC;
-    margin-bottom: 2px;
-    margin-left: 2px;
+    margin-bottom: 3px;
+    margin-left: 3px;
     box-shadow: 4px 5px 9px -4px rgba(99,98,99,1);
+    transition: .1s;
 }

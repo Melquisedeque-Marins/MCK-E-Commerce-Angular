@@ -7,6 +7,7 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { RegisterAddressComponent } from './pages/register-address/register-address.component';
 import { LoggedGuard } from './guard/logged.guard';
 import { RatingComponent } from './pages/rating/rating.component';
+import { AuthRouterPageComponent } from './components/auth-router-page/auth-router-page.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'checkout/register-address', component: RegisterAddressComponent, pathMatch: 'full', canActivate: [ LoggedGuard ] },
   {path: 'checkout', component: CheckoutComponent, canActivate: [ LoggedGuard ] },
   {path: 'rating/:id', component: RatingComponent, canActivate: [ LoggedGuard ] },
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  {path: 'auth/callback', component: AuthRouterPageComponent, pathMatch: 'full'},
+  {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({
