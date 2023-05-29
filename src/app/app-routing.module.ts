@@ -8,10 +8,12 @@ import { RegisterAddressComponent } from './pages/register-address/register-addr
 import { LoggedGuard } from './guard/logged.guard';
 import { RatingComponent } from './pages/rating/rating.component';
 import { AuthRouterPageComponent } from './components/auth-router-page/auth-router-page.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch:'full'},
   {path: 'busca/:searchTerm', component: HomeComponent},
+  {path: 'products/categories', component: CategoriesComponent},
   {path: 'products/:id', component: ProductDetailsComponent},
   {path: 'cart', component: CartComponent },
   {path: 'checkout/register-address', component: RegisterAddressComponent, pathMatch: 'full', canActivate: [ LoggedGuard ] },

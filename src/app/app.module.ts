@@ -41,6 +41,7 @@ import { PixPaymentComponent } from './components/pix-payment/pix-payment.compon
 import { CardPaymentComponent } from './components/card-payment/card-payment.component';
 import { BankSlipPaymentComponent } from './components/bank-slip-payment/bank-slip-payment.component';
 import { PaypalPaymentComponent } from './components/paypal-payment/paypal-payment.component';
+import { CategoriesComponent } from './pages/categories/categories.component';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -75,6 +76,7 @@ registerLocaleData(ptBr);
     CardPaymentComponent,
     BankSlipPaymentComponent,
     PaypalPaymentComponent,
+    CategoriesComponent,
   ],
   imports: [
     BrowserModule,

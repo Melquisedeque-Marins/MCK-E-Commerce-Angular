@@ -21,7 +21,7 @@ export class AuthRouterPageComponent implements OnInit {
       } catch (error) {
         console.log('No return URL found');
       }
-    }, 100);
+    }, 300);
   }
 
 }
