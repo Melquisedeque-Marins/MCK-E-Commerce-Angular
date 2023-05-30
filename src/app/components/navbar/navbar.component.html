@@ -11,7 +11,7 @@
             <li class="navbar__menu-item" > 
                 <a href="">Categorias</a>
                 <div class="menu-item-drop-menu">
-                    <a href="" *ngFor="let item of categoryList">{{item.name}}</a>
+                    <a routerLink="/categories/{{item.id}}" *ngFor="let item of categoryList">{{item.name}}</a>
                 </div>
             </li>
             <li class="navbar__menu-item" > 

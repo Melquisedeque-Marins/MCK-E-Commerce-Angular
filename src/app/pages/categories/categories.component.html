@@ -1,1 +1,12 @@
-<p>categories works!</p>
+<div class="container__category">
+    <h1>categoria</h1>
+    <div class="content__filter">
+        <label for="">min</label> <input type="text">
+        <label for="">max</label> <input type="text">
+    </div>
+    <div class="content__product-card">
+        <div *ngFor="let item of productList">
+            <app-product-card [currentRating]="item.rate"  [product]="item"></app-product-card>
+        </div>
+    </div>
+</div>

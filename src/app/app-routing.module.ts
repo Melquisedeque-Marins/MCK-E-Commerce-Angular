@@ -13,7 +13,7 @@ import { CategoriesComponent } from './pages/categories/categories.component';
 const routes: Routes = [
   {path: '', component: HomeComponent, pathMatch:'full'},
   {path: 'busca/:searchTerm', component: HomeComponent},
-  {path: 'products/categories', component: CategoriesComponent},
+  {path: 'categories/:id', component: CategoriesComponent},
   {path: 'products/:id', component: ProductDetailsComponent},
   {path: 'cart', component: CartComponent },
   {path: 'checkout/register-address', component: RegisterAddressComponent, pathMatch: 'full', canActivate: [ LoggedGuard ] },
