@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/Product';
 import { CategoryService } from 'src/app/services/category.service';
@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-
+  @Input() currentRating!: number;
   productList: Product[] = [];
 
   constructor(private productService: ProductService,

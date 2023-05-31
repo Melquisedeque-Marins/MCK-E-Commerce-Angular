@@ -1,8 +1,61 @@
 <div class="container__category">
     <h1>categoria</h1>
     <div class="content__filter">
-        <label for="">min</label> <input type="text">
-        <label for="">max</label> <input type="text">
+        <div class="filter-option">
+            <p>preço</p>
+            <div class="option-price">
+                <input type="checkbox" name="" id="">
+                <label for="">até €50,00</label>
+            </div>
+            <div class="option-price">
+                <input type="checkbox" name="" id="">
+                <label for="">€50,00 até €100,00</label>
+            </div>
+            <div class="option-price">
+                <input type="checkbox" name="" id="">
+                <label for="">€100,00 até €250,00</label>
+            </div>
+            <div class="option-price">
+                <input type="checkbox" name="" id="">
+                <label for="">€250,00 até €500,00</label>
+            </div>
+            <div class="option-price">
+                <input type="checkbox" name="" id="">
+                <label for="">€500,00 até €1.000,00</label>
+            </div>
+            
+        </div>
+
+        <div class="filter-option">
+            <p>preço</p>
+            <label for="">min</label> <input type="text">
+            <label for="">max</label> <input type="text">
+        </div>
+        <div class="filter-option">
+            <p>avaliação</p>
+            <div class="option-rating">
+                <input type="checkbox" name="" id="">
+                <ngb-rating [max]="5" [rate]="5" [readonly]="true"></ngb-rating>
+            </div>
+            <div class="option-rating">
+                <input type="checkbox" name="" id="">
+                <ngb-rating [max]="5" [rate]="4" [readonly]="true"></ngb-rating>
+            </div>
+            <div class="option-rating">
+                <input type="checkbox" name="" id="">
+                <ngb-rating [max]="5" [rate]="3" [readonly]="true"></ngb-rating>
+            </div>
+            <div class="option-rating">
+                <input type="checkbox" name="" id="">
+                <ngb-rating [max]="5" [rate]="2" [readonly]="true"></ngb-rating>
+            </div>
+            <div class="option-rating">
+                <input type="checkbox" name="" id="">
+                <ngb-rating [max]="5" [rate]="1" [readonly]="true"></ngb-rating>
+            </div>
+           
+
+        </div>
     </div>
     <div class="content__product-card">
         <div *ngFor="let item of productList">
