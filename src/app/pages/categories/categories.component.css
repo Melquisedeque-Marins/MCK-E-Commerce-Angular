@@ -9,24 +9,38 @@
     margin-bottom: 50px;
 }
 
-.filter-option {
-    margin-bottom: 20px;
+.categoties__content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: self-start;
 }
 
-.option-price {
+.content-filter {
+    background-color: #F5F6F6;
+    border-right: 1px solid #CCC;
+}
+
+.filter-option {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.option-item {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
 }
 
-.option-price input {
-    height: 15px;
-    width: 15px;
+.option-item input {
+    height: 20px;
+    width: 20px;
     margin-right: 10px;
 }
 
 ngb-rating {
     display: block;
     color: gold;
-    font-size: 20px;
+    font-size: 25px;
 }

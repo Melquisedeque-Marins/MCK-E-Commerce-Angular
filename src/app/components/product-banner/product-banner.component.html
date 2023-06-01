@@ -23,7 +23,9 @@
             </a>
         </div>
         <div class="banner__content-right">
-            <img [src]="product?.coverImg" alt="">
+            <a routerLink="/products/{{ product?.id }}">
+                <img [src]="product?.coverImg" alt="">
+            </a>
         </div>
     </div>
 </div>
