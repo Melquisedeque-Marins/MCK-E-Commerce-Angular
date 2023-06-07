@@ -1,18 +1,23 @@
 
+.container__category {
+    margin: 0 auto;
+}
+
 .content__product-card {
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    margin-top: 30px;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     margin-bottom: 50px;
+    padding: 10px;
 }
 
-.categoties__content {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    align-items: self-start;
+.categories__content {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .content-filter {

@@ -16,4 +16,8 @@ baseApiUrl: string = environment.productApiUrl;
   getCategories():Observable<Category[]> {
     return this.http.get<Category[]>(`${this.baseApiUrl}/cats`);
   }
+
+  getCategoryById(id:number):Observable<Category> {
+    return this.http.get<Category>(`${this.baseApiUrl}/cats/${id}`);
+  }
 }

@@ -1,6 +1,6 @@
 <div class="container__category">
-    <h1>categoria</h1>
-    <div class="categoties__content">
+    <app-section-title title="{{ category.name }}"></app-section-title>
+    <div class="categories__content">
         <div class="content-filter">
             <div class="filter-option">
                 <h5>preço</h5>
@@ -27,7 +27,7 @@
         
             </div>
             <div class="filter-option">
-                <p>avaliação</p>
+                <h5>avaliação</h5>
                 <div class="option-item">
                     <input type="checkbox" name="" id="">
                     <ngb-rating [max]="5" [rate]="5" [readonly]="true"></ngb-rating>

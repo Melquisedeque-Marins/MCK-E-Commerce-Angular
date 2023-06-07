@@ -26,6 +26,10 @@ export class ProductService {
     return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?categoryId=${catId}&isInSale=true`);
   }
 
+  getAllProductsPerCategory(catId:number):Observable<SpringPage<Product>> {
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}/categor?categoryId=${catId}`);
+  }
+
   getAllRelatedProducts(catId:number):Observable<SpringPage<Product>> {
     return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?categoryId=${catId}`);
   }
