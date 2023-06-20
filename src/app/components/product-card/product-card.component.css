@@ -58,6 +58,7 @@
 
 .content__img img {
     max-width: 80%;
+    background-color: #F5F6F6;
 }
 
 .content__img img:hover {
