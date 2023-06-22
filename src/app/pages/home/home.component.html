@@ -26,7 +26,9 @@
         <div class="content__category-card">
             <div *ngFor="let category of categoryList; let i = index" >
                 <div *ngIf="i < 6">
-                    <app-category-card [category]="category"></app-category-card>
+                    <a routerLink="/categories/{{category.id}}" *ngFor="let item of categoryList">
+                        <app-category-card [category]="category"></app-category-card>
+                    </a>
                 </div>
             </div>
         </div>
