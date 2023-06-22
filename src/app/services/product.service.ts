@@ -27,7 +27,7 @@ export class ProductService {
   }
 
   getAllProductsPerCategory(catId:number):Observable<SpringPage<Product>> {
-    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}/categor?categoryId=${catId}`);
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}/category?categoryId=${catId}`);
   }
 
   getAllRelatedProducts(catId:number):Observable<SpringPage<Product>> {

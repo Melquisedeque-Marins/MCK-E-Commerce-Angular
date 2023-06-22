@@ -29,29 +29,31 @@
             <div class="filter-option">
                 <h5>avaliação</h5>
                 <div class="option-item">
-                    <input type="checkbox" name="" id="">
+                    <input type="radio" name="price" id="">
                     <ngb-rating [max]="5" [rate]="5" [readonly]="true"></ngb-rating>
                 </div>
                 <div class="option-item">
-                    <input type="checkbox" name="" id="">
+                    <input type="radio" name="price" id="">
                     <ngb-rating [max]="5" [rate]="4" [readonly]="true"></ngb-rating>
                 </div>
                 <div class="option-item">
-                    <input type="checkbox" name="" id="">
+                    <input type="radio" name="price" id="">
                     <ngb-rating [max]="5" [rate]="3" [readonly]="true"></ngb-rating>
                 </div>
                 <div class="option-item">
-                    <input type="checkbox" name="" id="">
+                    <input type="radio" name="price" id="">
                     <ngb-rating [max]="5" [rate]="2" [readonly]="true"></ngb-rating>
                 </div>
                 <div class="option-item">
-                    <input type="checkbox" name="" id="">
+                    <input type="radio" name="price" id="">
                     <ngb-rating [max]="5" [rate]="1" [readonly]="true"></ngb-rating>
                 </div>
             </div>
         </div>
-        <div class="content__product-card" *ngFor="let item of productList">
-                <app-product-card [currentRating]="item.rate"  [product]="item"></app-product-card>
+        <div class="content__products">
+            <div class="products__product-card" *ngFor="let item of productList">
+                    <app-product-card [currentRating]="item.rate"  [product]="item"></app-product-card>
+            </div>
         </div>
     </div>
 </div>
