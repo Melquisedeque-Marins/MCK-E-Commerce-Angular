@@ -12,6 +12,9 @@
                 <app-product-card [currentRating]="item.rate"  [product]="item"></app-product-card>
             </div>
         </div>
+        <div>
+            <button (click)="showMore(1)">Mostrar mais</button>
+        </div>
         <div class="content__banner">
             <app-banner 
             bannerTitle = 'até 40% de desconto em movéis' 

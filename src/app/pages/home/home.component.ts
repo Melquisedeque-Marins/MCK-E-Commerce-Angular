@@ -65,4 +65,21 @@ export class HomeComponent implements OnInit {
       }
     })
   }
+
+  showMore(page?:number) {
+    this.productService.getAllProducts(page).subscribe(
+      {
+        next: (res) => {
+          this.productList.push(res.content[0]);
+          this.productList.push(res.content[1]);
+          this.productList.push(res.content[2]);
+          this.productList.push(res.content[3]);
+          this.productList.push(res.content[4]);
+          
+        },
+        error: (err) => console.log(err)
+    })
+
+  }
+
  }

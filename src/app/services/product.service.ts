@@ -18,8 +18,11 @@ export class ProductService {
     return this.http.get<Product>(`${this.baseApiUrl}/${id}`);
   }
 
-  getAllProducts():Observable<SpringPage<Product>> {  
-    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=0&size=10`);
+  getAllProducts(page?:number):Observable<SpringPage<Product>> {  
+    if(page) {
+      return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=${page}&size=5`);
+    }
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?page=0&size=5`);
   }
 
   getAllPromoProducts(catId:number):Observable<SpringPage<Product>> {
