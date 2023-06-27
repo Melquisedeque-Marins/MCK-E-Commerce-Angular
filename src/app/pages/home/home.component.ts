@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
   promoProductsList: Product[] = [];
   categoryList: Category[] = [];
   page!:SpringPage<Product>;
+  pageNumber:number = 0;
+  actualpage:number = 0;
 
   constructor(private productService: ProductService,
               private categoryService: CategoryService,
@@ -60,22 +62,18 @@ export class HomeComponent implements OnInit {
 
     this.categoryService.getCategories().subscribe({
       next: res =>  {
-         this.categoryList = res;
-         
+         this.categoryList = res;         
       }
     })
   }
 
-  showMore(page?:number) {
-    this.productService.getAllProducts(page).subscribe(
+  showMore() {
+    
+    this.productService.getAllProducts(this.actualpage + 1).subscribe(
       {
         next: (res) => {
-          this.productList.push(res.content[0]);
-          this.productList.push(res.content[1]);
-          this.productList.push(res.content[2]);
-          this.productList.push(res.content[3]);
-          this.productList.push(res.content[4]);
-          
+          res.content.map(p => this.productList.push(p));
+          this.actualpage += 1;
         },
         error: (err) => console.log(err)
     })
