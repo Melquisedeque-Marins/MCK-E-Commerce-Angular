@@ -23,3 +23,29 @@
     margin-bottom: 70px;
 }
 
+.btn-show-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.btn-show-more button {
+
+    font-family: Eina01, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFF;
+    background-color: #003D29;
+    border-radius: 30px;
+    padding: 15px 30px;
+    border: 1px solid #003D29;
+    cursor: pointer;
+    width: 180px;
+}
+
+.btn-show-more button:hover {
+    color: #FFF;
+    background-color: #231F1E;
+    transition: .5s;
+}
