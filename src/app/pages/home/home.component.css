@@ -20,7 +20,7 @@
     margin-top: 30px;
     width: 90%;
     margin: auto;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .btn-show-more {
@@ -31,7 +31,6 @@
 }
 
 .btn-show-more button {
-
     font-family: Eina01, sans-serif;
     font-size: 18px;
     font-weight: 600;

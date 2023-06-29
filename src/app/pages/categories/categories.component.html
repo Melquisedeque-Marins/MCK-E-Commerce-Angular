@@ -6,23 +6,23 @@
                 <h5>preço</h5>
                 <div class="option-item">
                     <input type="radio" name="price" id="">
-                    <label for="">até €50,00</label>
+                    <label for="">{{highestPrice/5 | currency : 'EUR' : true }}</label>
                 </div>
                 <div class="option-item">
                     <input type="radio" name="price" id="">
-                    <label for="">€50,00 até €100,00</label>
+                    <label for="">{{highestPrice/5 | currency : 'EUR' : true }} até {{highestPrice/4 | currency : 'EUR' : true }}</label>
                 </div>
                 <div class="option-item">
                     <input type="radio" name="price" id="">
-                    <label for="">€100,00 até €250,00</label>
+                    <label for="">{{highestPrice/4 | currency : 'EUR' : true }} até {{highestPrice/2 | currency : 'EUR' : true }}</label>
                 </div>
                 <div class="option-item">
                     <input type="radio" name="price" id="">
-                    <label for="">€250,00 até €500,00</label>
+                    <label for="">{{highestPrice/2 | currency : 'EUR' : true }} até {{highestPrice/1 | currency : 'EUR' : true }}</label>
                 </div>
                 <div class="option-item">
                     <input type="radio" name="price" id="">
-                    <label for="">€500,00 até €1.000,00</label>
+                    <label for="">acima de {{highestPrice | currency : 'EUR' : true }}</label>
                 </div>
         
             </div>
