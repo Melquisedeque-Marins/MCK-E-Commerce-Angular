@@ -4,6 +4,7 @@ export class Product {
    constructor() {}
    id!: number;
    name!: string;
+   brand!: string;
    skuCode!: string;
    description!: string;
    price!: number;

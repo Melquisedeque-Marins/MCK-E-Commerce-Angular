@@ -15,6 +15,7 @@ export class CategoriesComponent implements OnInit {
   productList: Product[] = [];
   category!: Category;
   highestPrice: number = 0;
+  brandList: string[] = [];
 
   constructor(private productService: ProductService,
     private categoryService: CategoryService,
@@ -26,12 +27,14 @@ export class CategoriesComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params => {
       this.highestPrice = 0;
+      this.brandList = [];
       if (params['id']) {
         this.productService.getAllProductsPerCategory(params['id']).subscribe( 
           {
             next: (res) => {
               this.productList = res.content
               this.productList.map(p => {
+                this.brandList.push(p.brand)
                 if (p.price >= this.highestPrice) {
                   this.highestPrice = p.price
                 }
