@@ -34,7 +34,9 @@ export class CategoriesComponent implements OnInit {
             next: (res) => {
               this.productList = res.content
               this.productList.map(p => {
-                this.brandList.push(p.brand)
+                if (p.brand !== null && !this.brandList.includes(p.brand)) {
+                  this.brandList.push(p.brand)
+                }
                 if (p.price >= this.highestPrice) {
                   this.highestPrice = p.price
                 }
