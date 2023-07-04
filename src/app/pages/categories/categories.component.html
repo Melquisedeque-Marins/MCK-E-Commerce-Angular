@@ -2,60 +2,62 @@
     <app-section-title title="{{ category.name }}"></app-section-title>
     <div class="categories__content">
         <div class="content-filter">
-            <div class="filter-option">
-                <h5>preço</h5>
-                <div class="option-item">
-                    <input type="radio" name="price" id="">
-                    <label for="">{{highestPrice/5 | currency : 'EUR' : true }}</label>
+                <div class="filter-option">
+                    <h5>preço</h5>
+                    <form [formGroup]="filterForm">
+                        <div class="option-item">
+                            
+                            <input type="radio" name="price" id="price">
+                            <label for="">até {{highestPrice/5 | currency : 'EUR' : true }}</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="price" id="price">
+                            <label for="">de {{highestPrice/5 | currency : 'EUR' : true }} a {{highestPrice/4 | currency : 'EUR' : true }}</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="price" id="price">
+                            <label for="">de {{highestPrice/4 | currency : 'EUR' : true }} a {{highestPrice/2 | currency : 'EUR' : true }}</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="price" id="price">
+                            <label for="">de {{highestPrice/2 | currency : 'EUR' : true }} a {{highestPrice/1 | currency : 'EUR' : true }}</label>
+                        </div>
+                        <div class="option-item">
+                            <input type="radio" name="price" id="price">
+                            <label for="">acima de {{highestPrice | currency : 'EUR' : true }}</label>
+                        </div>
+                    </form>
                 </div>
-                <div class="option-item">
-                    <input type="radio" name="price" id="">
-                    <label for="">{{highestPrice/5 | currency : 'EUR' : true }} até {{highestPrice/4 | currency : 'EUR' : true }}</label>
+                <div class="filter-option">
+                    <h5>marca</h5>
+                    <div class="option-item" *ngFor="let brand of brandList">
+                        <input type="radio" name="brand" id="brand">
+                        <label for="">{{brand}}</label>
+                    </div>       
                 </div>
-                <div class="option-item">
-                    <input type="radio" name="price" id="">
-                    <label for="">{{highestPrice/4 | currency : 'EUR' : true }} até {{highestPrice/2 | currency : 'EUR' : true }}</label>
+                <div class="filter-option">
+                    <h5>avaliação</h5>
+                    <div class="option-item">
+                        <input type="radio" name="rating" id="">
+                        <ngb-rating [max]="5" [rate]="5" [readonly]="true"></ngb-rating>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" name="rating" id="">
+                        <ngb-rating [max]="5" [rate]="4" [readonly]="true"></ngb-rating>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" name="rating" id="">
+                        <ngb-rating [max]="5" [rate]="3" [readonly]="true"></ngb-rating>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" name="rating" id="">
+                        <ngb-rating [max]="5" [rate]="2" [readonly]="true"></ngb-rating>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" name="price" id="">
+                        <ngb-rating [max]="5" [rate]="1" [readonly]="true"></ngb-rating>
+                    </div>
                 </div>
-                <div class="option-item">
-                    <input type="radio" name="price" id="">
-                    <label for="">{{highestPrice/2 | currency : 'EUR' : true }} até {{highestPrice/1 | currency : 'EUR' : true }}</label>
-                </div>
-                <div class="option-item">
-                    <input type="radio" name="price" id="">
-                    <label for="">acima de {{highestPrice | currency : 'EUR' : true }}</label>
-                </div>
-        
-            </div>
-            <div class="filter-option">
-                <h5>marca</h5>
-                <div class="option-item" *ngFor="let brand of brandList">
-                    <input type="radio" name="brand" id="">
-                    <label for="">{{brand}}</label>
-                </div>       
-            </div>
-            <div class="filter-option">
-                <h5>avaliação</h5>
-                <div class="option-item">
-                    <input type="radio" name="rating" id="">
-                    <ngb-rating [max]="5" [rate]="5" [readonly]="true"></ngb-rating>
-                </div>
-                <div class="option-item">
-                    <input type="radio" name="rating" id="">
-                    <ngb-rating [max]="5" [rate]="4" [readonly]="true"></ngb-rating>
-                </div>
-                <div class="option-item">
-                    <input type="radio" name="rating" id="">
-                    <ngb-rating [max]="5" [rate]="3" [readonly]="true"></ngb-rating>
-                </div>
-                <div class="option-item">
-                    <input type="radio" name="rating" id="">
-                    <ngb-rating [max]="5" [rate]="2" [readonly]="true"></ngb-rating>
-                </div>
-                <div class="option-item">
-                    <input type="radio" name="price" id="">
-                    <ngb-rating [max]="5" [rate]="1" [readonly]="true"></ngb-rating>
-                </div>
-            </div>
         </div>
         <div class="content__products">
             <div class="products__product-card" *ngFor="let item of productList">

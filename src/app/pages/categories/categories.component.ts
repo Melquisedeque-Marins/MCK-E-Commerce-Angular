@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Category } from 'src/app/models/Category';
 import { Product } from 'src/app/models/Product';
@@ -16,8 +17,10 @@ export class CategoriesComponent implements OnInit {
   category!: Category;
   highestPrice: number = 0;
   brandList: string[] = [];
+  filterForm!: FormGroup;
 
   constructor(private productService: ProductService,
+    private formBuilder: FormBuilder,
     private categoryService: CategoryService,
     private activatedRoute:ActivatedRoute,
     ) {
@@ -42,9 +45,9 @@ export class CategoriesComponent implements OnInit {
                 }
               })
               if (this.highestPrice/1000 < 1)
-                this.highestPrice = (this.highestPrice%10) * 10
+                this.highestPrice = Math.round((this.highestPrice%10) * 10)
                 else 
-                this.highestPrice = Math.round(this.highestPrice/1000) * 2000
+                this.highestPrice = Math.round(this.highestPrice/1000) * 1000
             },
             error: (err) => console.log(err)
         });
@@ -59,6 +62,16 @@ export class CategoriesComponent implements OnInit {
     })
   }
 
+  get price() {
+    return this.filterForm.get('price')!;
+  }
 
+  createfilterForm(field: any) {
+    this.filterForm = this.formBuilder.group({
+      price: [field.price],
+      rating: [field.rating],
+      brand: [field.brand]
+    })
+  }
 
 }
