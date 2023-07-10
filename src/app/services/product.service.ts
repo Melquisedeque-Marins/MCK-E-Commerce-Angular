@@ -40,4 +40,10 @@ export class ProductService {
   getAllProductsBySearchTerme(searchTerm:string) {
     return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}?name=${searchTerm}&page=0&size=10`);
   }
+
+  getAllProductsByFilter(minPrice: number, maxPrice: number, cat: number) {
+    return this.http.get<SpringPage<Product>>(`${this.baseApiUrl}/category/filter?min-price=${minPrice}&max-price=${maxPrice}&categoryId=${cat}&page=0&size=10`);
+  }
+
+
 }

@@ -6,12 +6,11 @@
                     <h5>preço</h5>
                     <form [formGroup]="filterForm">
                         <div class="option-item">
-                            
-                            <input type="radio" name="price" id="price">
+                            <input (click)="onFilter(200,500)"type="radio" name="price" id="price">
                             <label for="">até {{highestPrice/5 | currency : 'EUR' : true }}</label>
                         </div>
                         <div class="option-item">
-                            <input type="radio" name="price" id="price">
+                            <input (click)="onFilter(500,999)" type="radio" name="price" id="price">
                             <label for="">de {{highestPrice/5 | currency : 'EUR' : true }} a {{highestPrice/4 | currency : 'EUR' : true }}</label>
                         </div>
                         <div class="option-item">

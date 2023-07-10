@@ -24,10 +24,14 @@ export class CategoriesComponent implements OnInit {
     private categoryService: CategoryService,
     private activatedRoute:ActivatedRoute,
     ) {
+      
      
     }
 
   ngOnInit(): void {
+    if (this.productList.length !== 0) 
+      return;
+    
     this.activatedRoute.params.subscribe( params => {
       this.highestPrice = 0;
       this.brandList = [];
@@ -74,4 +78,15 @@ export class CategoriesComponent implements OnInit {
     })
   }
 
-}
+  onFilter(minPrice: number, maxPrice: number) {
+    this.activatedRoute.params.subscribe( params => {
+
+    this.productService.getAllProductsByFilter(minPrice,maxPrice, params['id']).subscribe(
+      {
+        next: (res) => {
+          this.productList = res.content;
+        },
+        error: (err) => console.log(err)
+    });
+  })
+}}
